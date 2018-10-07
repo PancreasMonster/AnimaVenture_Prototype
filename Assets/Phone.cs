@@ -7,6 +7,7 @@ public class Phone : MonoBehaviour {
     private Vector3 fp;   //First touch position
     private Vector3 lp;   //Last touch position
     private float dragDistance;  //minimum distance for a swipe to be registered
+    public float speed = 10;
 
     void Start()
     {
@@ -41,7 +42,7 @@ public class Phone : MonoBehaviour {
                     {   //If the horizontal movement is greater than the vertical movement...
                         if ((lp.x > fp.x))  //If the movement was to the right)
                         {   //Right swipe
-                            Debug.Log("Right Swipe");
+                            transform.Translate(transform.right * speed);
                         }
                         else
                         {   //Left swipe
