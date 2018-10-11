@@ -67,13 +67,13 @@ public class MapMovement : MonoBehaviour {
                 if (Vector2.Distance(DragNewPosition, Finger0Position) < DistanceBetweenFingers)
                 {
                     camera_GameObject.GetComponent<Camera>().orthographicSize += (PositionDifference.magnitude);
-                    character.transform.position -= new Vector3(PositionDifference.magnitude* panSpeedX, PositionDifference.magnitude* panSpeedY, 0);
+                    //character.transform.position -= new Vector3(PositionDifference.magnitude* panSpeedX, PositionDifference.magnitude* panSpeedY, 0);
                 }
 
                 if (Vector2.Distance(DragNewPosition, Finger0Position) >= DistanceBetweenFingers)
                 {
                     camera_GameObject.GetComponent<Camera>().orthographicSize -= (PositionDifference.magnitude);
-                    character.transform.position += new Vector3(PositionDifference.magnitude * panSpeedX, PositionDifference.magnitude * panSpeedY, 0);
+                   // character.transform.position += new Vector3(PositionDifference.magnitude * panSpeedX, PositionDifference.magnitude * panSpeedY, 0);
                 }
                 DistanceBetweenFingers = Vector2.Distance(DragNewPosition, Finger0Position);
                 }
