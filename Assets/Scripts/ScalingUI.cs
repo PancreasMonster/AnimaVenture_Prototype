@@ -19,7 +19,7 @@ public class ScalingUI : MonoBehaviour {
     }
     void Update()
     {
-        var osize = Camera.main.orthographicSize;
+        float osize = Camera.main.orthographicSize;
         if (orthoCurr != osize)
         {
             transform.localScale = scaleOrg * osize / orthoOrg;

@@ -6,17 +6,14 @@ public class MapMovement : MonoBehaviour {
 
     public float speed = 1;
     public bool notDragging = true;
+    private Vector3 posOrg;
 
 
 
-    // void Update()
-    //{
-    //  if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Moved)
-    //    {
-    //       Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-    //      transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
-    //  }
-    // }
+    private void Start()
+    {
+        posOrg = camera_GameObject.GetComponent<Camera>().WorldToViewportPoint(transform.position);
+    }
 
 
 
@@ -67,13 +64,13 @@ public class MapMovement : MonoBehaviour {
                 if (Vector2.Distance(DragNewPosition, Finger0Position) < DistanceBetweenFingers)
                 {
                     camera_GameObject.GetComponent<Camera>().orthographicSize += (PositionDifference.magnitude);
-                    //character.transform.position -= new Vector3(PositionDifference.magnitude* panSpeedX, PositionDifference.magnitude* panSpeedY, 0);
+                   // character.transform.position = Camera.main.ViewportToWorldPoint(posOrg);
                 }
 
                 if (Vector2.Distance(DragNewPosition, Finger0Position) >= DistanceBetweenFingers)
                 {
                     camera_GameObject.GetComponent<Camera>().orthographicSize -= (PositionDifference.magnitude);
-                   // character.transform.position += new Vector3(PositionDifference.magnitude * panSpeedX, PositionDifference.magnitude * panSpeedY, 0);
+                    //character.transform.position = Camera.main.ViewportToWorldPoint(posOrg);
                 }
                 DistanceBetweenFingers = Vector2.Distance(DragNewPosition, Finger0Position);
                 }
