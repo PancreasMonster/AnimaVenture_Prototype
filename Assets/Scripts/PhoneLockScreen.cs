@@ -33,6 +33,7 @@ public class PhoneLockScreen : MonoBehaviour
     public void Update()
     {
         line = Camera.main.ScreenPointToRay(Input.mousePosition);
+
     }
 
     void OnMouseOver()
@@ -42,30 +43,31 @@ public class PhoneLockScreen : MonoBehaviour
         {
             plm.startSequence = true;
             unselected = true;
-           
+
             plm.first += 1;
             plm.second += 1;
+            plm.posCounter += 1;
 
-        }
 
-        if (gameObject.GetComponent<LineRenderer>() == null)
-            return;
 
-        LR.positionCount = plm.posCount;
+            if (gameObject.GetComponent<LineRenderer>() == null)
+                return;
 
-        if (LR.positionCount > 0)
-        {
-            LR.SetPosition(0, transform.position);
-           
-            if (LR.positionCount > plm.posCount)
+
+
+            if (LR.positionCount > 0)
             {
-                LR.SetPosition(plm.first, line.origin);
-                LR.SetPosition(plm.second, line.origin);
-                plm.posCount += 1;
-             
+                
+
+                if (LR.positionCount > plm.posCount)
+                {
+                    LR.SetPosition(plm.first, transform.position);
+                    LR.SetPosition(plm.second, line.origin);
+                    plm.posCount += 1;
+
+                }
             }
         }
-       
     }
 
     void OnMouseExit()
@@ -81,6 +83,8 @@ public class PhoneLockScreen : MonoBehaviour
             LR = gameObject.AddComponent<LineRenderer>();
             plm.startSequence = true;
             LR.positionCount = 2;
+            plm.first -= 1;
+            plm.second -= 1;
             unselected = true;
         }
         if (LR.positionCount > 2)
@@ -90,7 +94,10 @@ public class PhoneLockScreen : MonoBehaviour
         {
             LR.SetPosition(1, line.origin);
         }
-
+        LR.positionCount = plm.posCounter;
+        LR.startWidth = .2f;
+        LR.endWidth = .2f;
+        LR.SetPosition(0, transform.position);
     }
 
    
