@@ -33,7 +33,11 @@ public class PhoneLockScreen : MonoBehaviour
     public void Update()
     {
         line = Camera.main.ScreenPointToRay(Input.mousePosition);
-
+        if (plm.startSequence == true && link == false)
+        {
+            LR = GameObject.FindGameObjectWithTag("PhoneCell").GetComponent<LineRenderer>();
+            link = true;
+        }
     }
 
     void OnMouseOver()
@@ -50,8 +54,7 @@ public class PhoneLockScreen : MonoBehaviour
 
 
 
-            if (gameObject.GetComponent<LineRenderer>() == null)
-                return;
+            
 
 
 
@@ -63,6 +66,9 @@ public class PhoneLockScreen : MonoBehaviour
                 {
                     LR.SetPosition(plm.first, transform.position);
                     LR.SetPosition(plm.second, line.origin);
+
+                    if (gameObject.GetComponent<LineRenderer>() == null)
+                        return;
                     plm.posCount += 1;
 
                 }
@@ -83,9 +89,11 @@ public class PhoneLockScreen : MonoBehaviour
             LR = gameObject.AddComponent<LineRenderer>();
             plm.startSequence = true;
             LR.positionCount = 2;
-            plm.first -= 1;
-            plm.second -= 1;
+            //plm.first -= 1;
+          // plm.second -= 1;
             unselected = true;
+            gameObject.tag = ("PhoneCell");
+            plm.posCounter += 1;
         }
         if (LR.positionCount > 2)
         {

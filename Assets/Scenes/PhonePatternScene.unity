@@ -199,6 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 84186197}
   - component: {fileID: 84186198}
+  - component: {fileID: 84186199}
   m_Layer: 0
   m_Name: CellManager
   m_TagString: Untagged
@@ -225,15 +226,28 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 84186196}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ca13dbe986a62147b595b2edd61e173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trackingUI: {fileID: 0}
+  cam: {fileID: 0}
+--- !u!114 &84186199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84186196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0d32d862d9e9a46b4d20c657d79a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   startSequence: 0
-  first: 1
-  second: 2
-  posCount: 3
+  first: 0
+  second: 1
+  posCount: 2
   posCounter: 2
 --- !u!1001 &326132317
 Prefab:
@@ -278,10 +292,14 @@ Prefab:
         type: 2}
       propertyPath: plm
       value: 
-      objectReference: {fileID: 84186198}
+      objectReference: {fileID: 84186199}
     - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
       propertyPath: m_Name
       value: PhoneCell (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
@@ -509,10 +527,14 @@ Prefab:
         type: 2}
       propertyPath: plm
       value: 
-      objectReference: {fileID: 84186198}
+      objectReference: {fileID: 84186199}
     - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
       propertyPath: m_Name
       value: PhoneCell (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
@@ -560,10 +582,14 @@ Prefab:
         type: 2}
       propertyPath: plm
       value: 
-      objectReference: {fileID: 84186198}
+      objectReference: {fileID: 84186199}
     - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
       propertyPath: m_Name
       value: PhoneCell (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
@@ -611,10 +637,10 @@ Prefab:
         type: 2}
       propertyPath: plm
       value: 
-      objectReference: {fileID: 84186198}
-    - target: {fileID: 4829815891943576, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.1
+      objectReference: {fileID: 84186199}
+    - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
@@ -728,10 +754,14 @@ Prefab:
         type: 2}
       propertyPath: plm
       value: 
-      objectReference: {fileID: 84186198}
+      objectReference: {fileID: 84186199}
     - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
       propertyPath: m_Name
       value: PhoneCell (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
@@ -779,10 +809,14 @@ Prefab:
         type: 2}
       propertyPath: plm
       value: 
-      objectReference: {fileID: 84186198}
+      objectReference: {fileID: 84186199}
     - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
       propertyPath: m_Name
       value: PhoneCell (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
@@ -830,10 +864,14 @@ Prefab:
         type: 2}
       propertyPath: plm
       value: 
-      objectReference: {fileID: 84186198}
+      objectReference: {fileID: 84186199}
     - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
       propertyPath: m_Name
       value: PhoneCell (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
@@ -881,10 +919,14 @@ Prefab:
         type: 2}
       propertyPath: plm
       value: 
-      objectReference: {fileID: 84186198}
+      objectReference: {fileID: 84186199}
     - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
       propertyPath: m_Name
       value: PhoneCell (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
@@ -932,10 +974,14 @@ Prefab:
         type: 2}
       propertyPath: plm
       value: 
-      objectReference: {fileID: 84186198}
+      objectReference: {fileID: 84186199}
     - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
       propertyPath: m_Name
       value: PhoneCell (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328041432877262, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
