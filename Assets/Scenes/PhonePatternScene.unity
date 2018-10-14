@@ -234,6 +234,7 @@ MonoBehaviour:
   first: 1
   second: 2
   posCount: 3
+  posCounter: 2
 --- !u!1001 &326132317
 Prefab:
   m_ObjectHideFlags: 0
@@ -611,6 +612,10 @@ Prefab:
       propertyPath: plm
       value: 
       objectReference: {fileID: 84186198}
+    - target: {fileID: 4829815891943576, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14303f94b3b70542bf5df78e6258c4e, type: 2}
   m_IsPrefabAsset: 0
