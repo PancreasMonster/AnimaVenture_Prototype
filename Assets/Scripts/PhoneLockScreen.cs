@@ -18,7 +18,8 @@ public class PhoneLockScreen : MonoBehaviour
     bool link = false;
     Ray line;
     LineRenderer LR;
-    public GameObject col1, col2;
+  //  public GameObject col1, col2;
+    public PhoneLockManager plm; 
 
     void Start()
         {
@@ -26,26 +27,45 @@ public class PhoneLockScreen : MonoBehaviour
             m_Renderer = GetComponent<MeshRenderer>();
             //Fetch the original color of the GameObject
             m_OriginalColor = m_Renderer.material.color;
-        LR = GetComponent<LineRenderer>();
+      //  LR = GetComponent<LineRenderer>();
         }
 
     public void Update()
     {
         line = Camera.main.ScreenPointToRay(Input.mousePosition);
-        
     }
 
     void OnMouseOver()
         {
 
-        // if (unselected == false)
-        // {
-        //     m_Renderer.material.color = m_MouseOverColor;
-        //  } else
-        //  {
-        
-          //  LR.SetPosition(8, new Vector3(line.origin.x, transform.position.y, line.origin.z));
-       // }
+        if (plm.startSequence == true && unselected == false)
+        {
+            plm.startSequence = true;
+            unselected = true;
+           
+            plm.first += 1;
+            plm.second += 1;
+
+        }
+
+        if (gameObject.GetComponent<LineRenderer>() == null)
+            return;
+
+        LR.positionCount = plm.posCount;
+
+        if (LR.positionCount > 0)
+        {
+            LR.SetPosition(0, transform.position);
+           
+            if (LR.positionCount > plm.posCount)
+            {
+                LR.SetPosition(plm.first, line.origin);
+                LR.SetPosition(plm.second, line.origin);
+                plm.posCount += 1;
+             
+            }
+        }
+       
     }
 
     void OnMouseExit()
@@ -56,19 +76,24 @@ public class PhoneLockScreen : MonoBehaviour
 
     public void OnMouseDrag()
     {
-        if (unselected == false)
+        if (plm.startSequence == false && unselected == false)
         {
-          //  for (int i = 0; i < 4; i++)
-         //   {
-          //      LR.SetPosition(i, transform.localPosition);
-           // }
-            LR.SetPosition(0, transform.position);
-            LR.SetPosition(1, col1.transform.position);
-            LR.SetPosition(2, col2.transform.position);
-            LR.SetPosition(3, new Vector3(line.origin.x, transform.position.y, line.origin.z));
-            m_Renderer.material.color = m_MouseOverColor;
+            LR = gameObject.AddComponent<LineRenderer>();
+            plm.startSequence = true;
+            LR.positionCount = 2;
+            unselected = true;
         }
+        if (LR.positionCount > 2)
+        {
+            LR.SetPosition(plm.second, line.origin);
+        } else
+        {
+            LR.SetPosition(1, line.origin);
+        }
+
     }
+
+   
 
     public void OnMouseUp()
     {
