@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenuScene.unity
     guid: 251345145e05fd54c9c07ff64c2a4fbd
   - enabled: 1
+    path: Assets/Scenes/PhonePatternScene.unity
+    guid: 36c10536ec1980e49b150093b8a4ee1e
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
