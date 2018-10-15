@@ -5,9 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour {
 
-    public void PhonePatternScene()
+
+    public Animator transitionAnim;
+    public string SceneName;
+
+    public void LoadNextScene()
     {
-        SceneManager.LoadScene("PhonePatternScene");
+        StartCoroutine(LoadScene());
+    }
+    IEnumerator LoadScene()
+    {
+        transitionAnim.SetTrigger("End");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(SceneName);
     }
 
 }
