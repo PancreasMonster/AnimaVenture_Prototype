@@ -90,22 +90,27 @@ public class PhoneLockScreen : MonoBehaviour
             plm.startSequence = true;
             LR.positionCount = 2;
             //plm.first -= 1;
-          // plm.second -= 1;
+            // plm.second -= 1;
             unselected = true;
             gameObject.tag = ("PhoneCell");
             plm.posCounter += 1;
         }
+
+        if (gameObject.GetComponent<LineRenderer>() == null)
+            return;
+
         if (LR.positionCount > 2)
-        {
-            LR.SetPosition(plm.second, line.origin);
-        } else
-        {
-            LR.SetPosition(1, line.origin);
-        }
-        LR.positionCount = plm.posCounter;
-        LR.startWidth = .2f;
-        LR.endWidth = .2f;
-        LR.SetPosition(0, transform.position);
+            {
+                LR.SetPosition(plm.second, line.origin);
+            }
+            else
+            {
+                LR.SetPosition(1, line.origin);
+            }
+            LR.positionCount = plm.posCounter;
+            LR.startWidth = .2f;
+            LR.endWidth = .2f;
+            LR.SetPosition(0, transform.position);
     }
 
    
