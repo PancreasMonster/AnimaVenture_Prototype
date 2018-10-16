@@ -17,11 +17,18 @@ public class JoinTheDots : MonoBehaviour {
         {
             if(dots[dotn].GetComponent<Dot>().fill == true)
             {
-                dotn += 1;
+                if(dotn < 9)
+                {
+                    dotn += 1;
+                }
+                else
+                {
+
+                }
             }
         }
 
-        if( dotn >= dots.Length - 2)
+        if( dotn >= dots.Length)
         {
             Destroy(this);
         }

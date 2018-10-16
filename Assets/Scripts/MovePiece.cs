@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovePiece : MonoBehaviour
 {
     public bool pickedup = false;
+    public bool placed = false;
     // Use this for initialization
     void Start()
     {
@@ -22,21 +23,25 @@ public class MovePiece : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
         pickedup = true;
     }
 
-    private void OnMouseUp()
+    void OnMouseUp()
     {
         pickedup = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if (collision.gameObject.name == gameObject.name)
+        if (pickedup == false)
         {
-            transform.position = collision.gameObject.transform.position;
+            if (other.gameObject.name == gameObject.name)
+            {
+                transform.position = other.gameObject.transform.position;
+                placed = true;
+            }
         }
     }
 }
