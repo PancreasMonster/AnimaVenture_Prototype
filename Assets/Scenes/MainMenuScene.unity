@@ -5237,7 +5237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionAnim: {fileID: 1969369359}
-  SceneName: PhonePatternScreen
+  SceneName: PhonePatternScene
 --- !u!1 &536157136
 GameObject:
   m_ObjectHideFlags: 0
