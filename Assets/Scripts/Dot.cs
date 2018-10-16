@@ -6,12 +6,7 @@ public class Dot : MonoBehaviour {
 
     public bool fill = false;
 
-    private void OnMouseDown()
-    {
-        fill = true;
-    }
-
-    private void OnMouseDrag()
+    private void OnMouseEnter()
     {
         fill = true;
     }

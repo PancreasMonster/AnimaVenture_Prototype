@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePiece : MonoBehaviour {
+public class MovePiece : MonoBehaviour
+{
     public bool pickedup = false;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(pickedup == true)
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (pickedup == true)
         {
-            Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            Vector2 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 20);
+            Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
             transform.position = objPosition;
         }
-	}
+    }
 
     private void OnMouseDown()
     {
@@ -27,5 +30,13 @@ public class MovePiece : MonoBehaviour {
     private void OnMouseUp()
     {
         pickedup = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == gameObject.name)
+        {
+            transform.position = collision.gameObject.transform.position;
+        }
     }
 }

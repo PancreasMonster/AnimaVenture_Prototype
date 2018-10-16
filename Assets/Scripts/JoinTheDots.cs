@@ -5,6 +5,7 @@ using UnityEngine;
 public class JoinTheDots : MonoBehaviour {
     public GameObject[] dots;
     int dotn = 0;
+    public bool held = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,8 +13,6 @@ public class JoinTheDots : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(dotn);
-
         foreach (GameObject dot in dots)
         {
             if(dots[dotn].GetComponent<Dot>().fill == true)
@@ -22,9 +21,19 @@ public class JoinTheDots : MonoBehaviour {
             }
         }
 
-        if( dotn == dots.Length - 1)
+        if( dotn >= dots.Length - 2)
         {
             Destroy(this);
         }
 	}
+
+    private void OnMouseDown()
+    {
+        held = true;
+    }
+
+    private void OnMouseUp()
+    {
+        held = false;
+    }
 }
