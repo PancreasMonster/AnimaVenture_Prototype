@@ -4,11 +4,49 @@ using UnityEngine;
 
 public class MapMovement : MonoBehaviour {
 
-    
-    public float dragSpeed = 2;
-    private Vector3 dragOrigin;
+
 
     public bool notDragging = true;
+    public float panSpeed = 4.0f;
+    private Vector3 mouseOrigin;
+    public bool isPanning;
+
+
+    // Update is called once per frame
+    void Update()
+    {
+
+       
+        if (Input.GetMouseButtonDown(0))
+        {
+            //left click was pressed    
+            mouseOrigin = Input.mousePosition;
+            isPanning = true;
+            
+        }
+
+
+        // on button release
+        if (Input.GetMouseButtonUp(0))
+        {
+            isPanning = false;
+        }
+
+        //move camera while button is helf
+        if (isPanning)
+        {
+            Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOrigin);
+
+            // move x and y azis but not on z axis
+            Vector3 move = new Vector3(pos.x * panSpeed, pos.y * panSpeed, 0);
+
+            Camera.main.transform.Translate(-move, Space.Self);
+            Debug.Log(pos);
+            Debug.Log(move);
+        }
+    }
+
+    /*
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -26,9 +64,10 @@ public class MapMovement : MonoBehaviour {
     }
 
     
-    /*
-    public float speed = 1;
     
+
+    public float speed = 1;
+   
     private Vector3 posOrg;
 
 
@@ -56,26 +95,29 @@ public class MapMovement : MonoBehaviour {
     void Update()
     {
 
+        if (Input.GetMouseButton(0) && notDragging == true)
+        {
+            Vector2 touchDeltaPosition = Input.mouseScrollDelta;
+            transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
+        }
+        StartPosition = GetWorldPosition();
+
         character.transform.localScale = new Vector3(camera_GameObject.GetComponent<Camera>().orthographicSize / 5, camera_GameObject.GetComponent<Camera>().orthographicSize / 5, 1);
     
             if (Input.touchCount == 0 && isZooming)
             {
                 isZooming = false;
             }
-
-            if (Input.touchCount == 1)
+            
+           if (Input.touchCount == 1)
             {
                 if (!isZooming)
                 {
-                    if (Input.GetTouch(0).phase == TouchPhase.Moved && notDragging == true)
-                    {
-                        Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-                        transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
-                    }
-                    StartPosition = GetWorldPosition();
+                    
                 }
             }
-            else if (Input.touchCount == 2 && notDragging == true)
+
+        if (Input.touchCount == 2 && notDragging == true)
             {
                 if (Input.GetTouch(1).phase == TouchPhase.Moved)
                 {
@@ -111,6 +153,6 @@ public class MapMovement : MonoBehaviour {
         {
             return camera_GameObject.GetComponent<Camera>().ScreenToWorldPoint(Input.GetTouch(FingerIndex).position);
         } */
-    
+
 }
 

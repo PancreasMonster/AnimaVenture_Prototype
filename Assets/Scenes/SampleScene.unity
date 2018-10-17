@@ -944,6 +944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68275fe7165992f4ab0225e4ecedd263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unselected: 0
+  link: 0
   plm: {fileID: 0}
 --- !u!1 &489613088
 GameObject:
@@ -1186,7 +1188,6 @@ GameObject:
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
   - component: {fileID: 534669907}
-  - component: {fileID: 534669908}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1278,23 +1279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbbba4ad575f7a439b5f3beea90dfe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.01
   notDragging: 1
-  camera_GameObject: {fileID: 534669902}
-  character: {fileID: 1028529090}
-  panSpeedX: 1
-  panSpeedY: 1
---- !u!114 &534669908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cc79f136b9431b498b0237a595e23ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  panSpeed: 1
+  isPanning: 0
 --- !u!1 &626245655
 GameObject:
   m_ObjectHideFlags: 0
