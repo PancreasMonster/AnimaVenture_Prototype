@@ -14,11 +14,10 @@ public class PhoneLockScreen : MonoBehaviour
         //Get the GameObject’s mesh renderer to access the GameObject’s material and color
         MeshRenderer m_Renderer;
 
-    bool unselected = false;
-    bool link = false;
+    public bool unselected = false;
+    public bool link = false;
     Ray line;
     LineRenderer LR;
-  //  public GameObject col1, col2;
     public PhoneLockManager plm; 
 
     void Start()
@@ -113,6 +112,8 @@ public class PhoneLockScreen : MonoBehaviour
                 LR.SetPosition(1, line.origin);
             }
             LR.positionCount = plm.posCounter;
+            LR.startColor = (Color.blue);
+            LR.endColor = (Color.blue);
             LR.startWidth = .2f;
             LR.endWidth = .2f;
             LR.SetPosition(0, transform.position);
