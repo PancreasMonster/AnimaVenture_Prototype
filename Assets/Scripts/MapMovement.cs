@@ -33,7 +33,7 @@ public class MapMovement : MonoBehaviour {
         }
 
         //move camera while button is helf
-        if (isPanning)
+        if (isPanning && notDragging == true)
         {
             Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOrigin);
 
