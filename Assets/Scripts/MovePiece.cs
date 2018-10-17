@@ -17,7 +17,7 @@ public class MovePiece : MonoBehaviour
     {
         if (pickedup == true)
         {
-            Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 20);
+            Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
             Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
             transform.position = objPosition;
         }
