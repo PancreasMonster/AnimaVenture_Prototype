@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,7 +199,6 @@ GameObject:
   m_Component:
   - component: {fileID: 84186197}
   - component: {fileID: 84186199}
-  - component: {fileID: 84186198}
   m_Layer: 0
   m_Name: CellManager
   m_TagString: Untagged
@@ -229,18 +228,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &84186198
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 84186196}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 7.028658, y: 0, z: 7.0290318}
-  m_Center: {x: 0.30070925, y: 0.5, z: -0.17517376}
 --- !u!114 &84186199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,13 +240,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSequence: 0
-  sceneTransition: 0
   first: 0
   second: 1
   posCount: 2
   posCounter: 2
   undo: {fileID: 774868694}
   finish: {fileID: 1585455679}
+  LRpoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &140598023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4829815891943576, guid: c14303f94b3b70542bf5df78e6258c4e,
