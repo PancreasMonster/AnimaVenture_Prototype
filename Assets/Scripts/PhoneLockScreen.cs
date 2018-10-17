@@ -86,7 +86,6 @@ public class PhoneLockScreen : MonoBehaviour
 
     void OnMouseExit()
      {
-     // Reset the color of the GameObject back to normal
      m_Renderer.material.color = m_OriginalColor;
      }
 
@@ -97,8 +96,6 @@ public class PhoneLockScreen : MonoBehaviour
             LR = gameObject.AddComponent<LineRenderer>();
             plm.startSequence = true;
             LR.positionCount = 2;
-            //plm.first -= 1;
-            // plm.second -= 1;
             unselected = true;
             gameObject.tag = ("PhoneCell");
             plm.posCounter += 1;
@@ -127,8 +124,7 @@ public class PhoneLockScreen : MonoBehaviour
     {
         if (link == false)
         {
-            //LR.SetPosition(7, transform.position);
-            //LR.SetPosition(8, transform.position);
+            
         }
     }
 }

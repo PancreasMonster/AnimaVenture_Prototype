@@ -8,6 +8,7 @@ TagManager:
   - Laser
   - PhoneCell
   - JoinTheDots
+  - CellManager
   layers:
   - Default
   - TransparentFX

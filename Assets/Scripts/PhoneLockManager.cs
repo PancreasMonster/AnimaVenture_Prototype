@@ -41,6 +41,7 @@ public class PhoneLockManager : MonoBehaviour {
 
     public void NextScene ()
     {
+        LR.positionCount -= 2;
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         sceneTransition = true;
     }
@@ -50,5 +51,9 @@ public class PhoneLockManager : MonoBehaviour {
         LRpoints[first] = f;
     }
 
+    public void Undo ()
+    {
+        LR.positionCount -= 2;
+    }
     
 }
