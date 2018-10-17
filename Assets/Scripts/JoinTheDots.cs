@@ -36,12 +36,14 @@ public class JoinTheDots : MonoBehaviour {
                 {
                     dotn += 1;
                 }
+
+                if (dotn == 9)
+                {
+                    Destroy(this);
+                }
             }
         }
 
-        if (dotn == dots.Length - 1)
-        {
-            Destroy(this);
-        }
+        
     }
 }
