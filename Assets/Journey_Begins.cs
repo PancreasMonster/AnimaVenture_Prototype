@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Journey_Begins : MonoBehaviour {
 
     public float timer;
+    public float timerAfterAudio;
     public AudioSource myAudio;
     public string textToShow;
     public Text textBox;
     public GameObject ParticleSystem;
+    public string SceneName;
 
 	// Use this for initialization
 	void Start () {
@@ -29,5 +32,7 @@ public class Journey_Begins : MonoBehaviour {
         textBox.text = "";
         ParticleSystem.SetActive(false);
         myAudio.Play();
+        yield return new WaitForSeconds(timerAfterAudio);
+        SceneManager.LoadScene(SceneName);
     }
 }

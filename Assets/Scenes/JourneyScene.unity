@@ -4774,10 +4774,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 5
+  timerAfterAudio: 6
   myAudio: {fileID: 1294360877}
   textToShow: Relax, take a deep breath and close your eyes...
   textBox: {fileID: 1776769109}
   ParticleSystem: {fileID: 349416900}
+  SceneName: MainMenuScene
 --- !u!4 &410316291
 Transform:
   m_ObjectHideFlags: 0

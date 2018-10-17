@@ -15,7 +15,7 @@ public class SceneTransition : MonoBehaviour {
     }
     IEnumerator LoadScene()
     {
-        transitionAnim.SetTrigger("End");
+        transitionAnim.SetTrigger("end");
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneName);
     }
