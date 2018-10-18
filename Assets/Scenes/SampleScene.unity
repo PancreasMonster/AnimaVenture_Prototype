@@ -2176,7 +2176,7 @@ GameObject:
   - component: {fileID: 1028529092}
   - component: {fileID: 1028529091}
   - component: {fileID: 1028529096}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: DraggableSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2941,7 +2941,7 @@ GameObject:
   - component: {fileID: 1218548328}
   - component: {fileID: 1218548327}
   - component: {fileID: 1218548326}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DragTargetSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2958,7 +2958,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
