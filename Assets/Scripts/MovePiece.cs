@@ -41,6 +41,8 @@ public class MovePiece : MonoBehaviour
             {
                 transform.position = other.gameObject.transform.position;
                 placed = true;
+                Jigsaw.piecesleft -= 1;
+                Destroy(this);
             }
         }
     }

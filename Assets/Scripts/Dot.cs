@@ -5,9 +5,10 @@ using UnityEngine;
 public class Dot : MonoBehaviour {
 
     public bool fill = false;
-
-    private void OnMouseEnter()
+    
+    public void OnMouseEnter()
     {
-        fill = true;
+        JoinTheDots.dotn += 1;
+        Destroy(this);
     }
 }

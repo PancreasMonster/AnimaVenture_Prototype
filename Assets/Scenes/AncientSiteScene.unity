@@ -678,6 +678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 507515876}
+  - component: {fileID: 507515877}
   m_Layer: 0
   m_Name: Jigsaw
   m_TagString: Untagged
@@ -707,6 +708,18 @@ Transform:
   m_Father: {fileID: 1596688876}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &507515877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507515875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea53e7c40c2b3b840abb1d7dbc70dd04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: MainMenuScene
 --- !u!1 &528590025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,7 +2486,7 @@ MonoBehaviour:
   - {fileID: 948361755}
   - {fileID: 42582228}
   - {fileID: 1625150784}
-  held: 0
+  Jigsaw: {fileID: 507515875}
 --- !u!1 &2079576230
 GameObject:
   m_ObjectHideFlags: 0
