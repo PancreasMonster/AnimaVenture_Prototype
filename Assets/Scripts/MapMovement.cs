@@ -10,6 +10,7 @@ public class MapMovement : MonoBehaviour {
     public float panSpeed = 4.0f;
     private Vector3 mouseOrigin;
     public bool isPanning;
+    public float MIN_X, MAX_X, MIN_Y, MAX_Y;
 
 
     // Update is called once per frame
@@ -40,7 +41,9 @@ public class MapMovement : MonoBehaviour {
             // move x and y azis but not on z axis
             Vector3 move = new Vector3(pos.x * panSpeed, pos.y * panSpeed, 0);
 
-            Camera.main.transform.Translate(-move, Space.Self);
+            transform.Translate(-move, Space.Self);
+            transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x, MIN_X, MAX_X), Mathf.Clamp(transform.position.y, MIN_Y, MAX_Y), -15);
             Debug.Log(pos);
             Debug.Log(move);
         }

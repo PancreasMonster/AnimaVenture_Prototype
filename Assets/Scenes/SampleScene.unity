@@ -1184,10 +1184,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 534669905}
+  - component: {fileID: 534669907}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
-  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1267,6 +1267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca13dbe986a62147b595b2edd61e173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trackingUI: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,6 +1283,10 @@ MonoBehaviour:
   notDragging: 1
   panSpeed: 1
   isPanning: 0
+  MIN_X: 3.094201
+  MAX_X: 27.22186
+  MIN_Y: -9.097695
+  MAX_Y: 2.797675
 --- !u!1 &626245655
 GameObject:
   m_ObjectHideFlags: 0
