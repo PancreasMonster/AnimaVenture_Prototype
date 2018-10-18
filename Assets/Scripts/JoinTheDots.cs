@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JoinTheDots : MonoBehaviour {
     public GameObject[] dots;
-    int dotn = 0;
+    public int dotn = 0;
     public bool held = false;
 	// Use this for initialization
 	void Start () {
@@ -13,8 +13,11 @@ public class JoinTheDots : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-	}
+        if (dotn == 9)
+        {
+            Destroy(this);
+        }
+    }
 
     private void OnMouseDown()
     {
@@ -37,10 +40,7 @@ public class JoinTheDots : MonoBehaviour {
                     dotn += 1;
                 }
 
-                if (dotn == 9)
-                {
-                    Destroy(this);
-                }
+                
             }
         }
 
