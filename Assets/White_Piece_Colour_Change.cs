@@ -15,6 +15,8 @@ public class White_Piece_Colour_Change : MonoBehaviour {
     {
         if (CBN.CurrentColour == ColourChecker)
         {
+            CBN.piecesCompleted += 1;
+            Debug.Log(CBN.piecesCompleted);
             Destroy(this.gameObject);
         }
     }

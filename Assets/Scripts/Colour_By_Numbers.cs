@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using UnityEngine.SceneManagement;
+using UnityEngine;
+
 
 
 public class Colour_By_Numbers : MonoBehaviour {
 
     public int CurrentColour = 0;
+    public int piecesCompleted, maxPieces = 32;
+    public GameObject finishScene; 
 	// Use this for initialization
 	void Start () {
 		
@@ -74,6 +78,14 @@ public class Colour_By_Numbers : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
- 
+        if (piecesCompleted >= maxPieces)
+        {
+            finishScene.SetActive(true);
+        }
+    }
+
+    public void ChangeScene ()
+    {
+        SceneManager.LoadScene("AncientSiteScene", LoadSceneMode.Single);
     }
 }
