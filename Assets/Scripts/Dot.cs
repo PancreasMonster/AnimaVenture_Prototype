@@ -8,7 +8,12 @@ public class Dot : MonoBehaviour {
     
     public void OnMouseEnter()
     {
-        JoinTheDots.dotn += 1;
-        Destroy(this);
+        if(fill == false)
+        {
+            fill = true;
+            JoinTheDots.dotn += 1;
+        }
+
+        
     }
 }
