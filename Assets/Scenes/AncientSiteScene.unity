@@ -907,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea53e7c40c2b3b840abb1d7dbc70dd04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: MainMenuScene
+  sceneName: NewgrangeScene
 --- !u!1 &528590025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,13 +1043,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 773357873}
-  m_LocalRotation: {x: -0, y: -0, z: -0.16027479, w: 0.98707247}
-  m_LocalPosition: {x: -5.22, y: 0.86, z: 0}
-  m_LocalScale: {x: 19.186901, y: 1.41402, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.63594234, w: 0.7717366}
+  m_LocalPosition: {x: -5.09, y: 0.96, z: 0}
+  m_LocalScale: {x: 16.368153, y: 1.41402, z: 1}
   m_Children: []
   m_Father: {fileID: 438292765}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -18.446001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -78.98}
 --- !u!212 &773357875
 SpriteRenderer:
   m_ObjectHideFlags: 0
