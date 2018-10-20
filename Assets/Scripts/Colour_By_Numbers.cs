@@ -3,13 +3,27 @@
 
 public class Colour_By_Numbers : MonoBehaviour {
 
-    int ColourPalette = 0; 
+    public int CurrentColour = 0;
 	// Use this for initialization
 	void Start () {
 		
 	}
 
-    public void OnMouseDown()
+    public void ChangeColour (int ColourPalette)
+    {
+        CurrentColour = ColourPalette;
+        Debug.Log(ColourPalette);
+    }
+
+    public void FillInColour (GameObject GO)
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            GO.SetActive(false);
+        }
+    }
+
+    /*public void OnMouseDown()
     {
         if (gameObject.tag == "Button1")
         {
@@ -56,10 +70,10 @@ public class Colour_By_Numbers : MonoBehaviour {
             ColourPalette = 9;
             Debug.Log("ColourPalette9");
         }
-    }
+    }*/
 
     // Update is called once per frame
     void Update () {
-
-	}
+ 
+    }
 }

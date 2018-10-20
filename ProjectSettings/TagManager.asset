@@ -18,6 +18,7 @@ TagManager:
   - Button7
   - Button8
   - Button9
+  - ColourByNumbers
   layers:
   - Default
   - TransparentFX
