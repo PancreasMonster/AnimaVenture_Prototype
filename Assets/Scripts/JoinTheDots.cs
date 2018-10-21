@@ -13,7 +13,7 @@ public class JoinTheDots : MonoBehaviour {
 
     // Update is called once per frame
     public void Update() {
-        if (dotn == 11)
+        if (dotn == 12)
         {
             Jigsaw.SetActive(true);
             Destroy(this.gameObject);
@@ -69,6 +69,11 @@ public class JoinTheDots : MonoBehaviour {
             dots[10].SetActive(true);
         }
 
+        if (dots[10].GetComponent<Dot>().fill == true)
+        {
+            dots[11].SetActive(true);
+        }
+
         if (dots[0].GetComponent<Dot>().fill == true && dots[1].GetComponent<Dot>().fill == true)
         {
             Line[0].SetActive(true);
@@ -117,6 +122,11 @@ public class JoinTheDots : MonoBehaviour {
         if (dots[9].GetComponent<Dot>().fill == true && dots[10].GetComponent<Dot>().fill == true)
         {
             Line[9].SetActive(true);
+        }
+
+        if (dots[10].GetComponent<Dot>().fill == true && dots[11].GetComponent<Dot>().fill == true)
+        {
+            Line[10].SetActive(true);
         }
     }
 }
