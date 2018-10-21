@@ -12,7 +12,10 @@ public class PhoneLockManager : MonoBehaviour {
     private LineRenderer LR; 
     public Button undo, finish;
     public Transform[] LRpoints;
-    private PhoneLockScreen[] cells; 
+    private PhoneLockScreen[] cells;
+    public Color LRColour;
+    private float r, g, b;
+    public Slider slider1, slider2, slider3;
 
 
     void Start()
@@ -43,6 +46,11 @@ public class PhoneLockManager : MonoBehaviour {
             AddTransforms(GameObject.FindGameObjectWithTag("PhoneCell").GetComponent<Transform>());
             checkForLR = true;
         }
+        r = slider1.value;
+        g = slider2.value;
+        b = slider3.value;
+        LRColour = new Color(r, g, b, 1);
+
     }
 
 

@@ -18,7 +18,8 @@ public class PhoneLockScreen : MonoBehaviour
     public bool link = false;
     Ray line;
     LineRenderer LR;
-    public PhoneLockManager plm; 
+    public PhoneLockManager plm;
+    //private bool colourChanger;
 
     void Start()
         {
@@ -41,6 +42,8 @@ public class PhoneLockScreen : MonoBehaviour
         if (gameObject.GetComponent<LineRenderer>() == null)
             return;
 
+        LR.material.color = plm.LRColour;
+        LR.colorGradient.mode = GradientMode.Fixed; 
         for (int i = 0; i < LR.positionCount; i ++)
         {
             LR.SetPosition(i, plm.LRpoints[i].position);
@@ -112,8 +115,9 @@ public class PhoneLockScreen : MonoBehaviour
                 LR.SetPosition(1, line.origin);
             }
             LR.positionCount = plm.posCounter;
-            LR.startColor = (Color.blue);
-            LR.endColor = (Color.blue);
+           // LR.startColor = (Color.blue);
+          //  LR.endColor = (Color.blue);
+            
             LR.startWidth = .2f;
             LR.endWidth = .2f;
             LR.SetPosition(0, transform.position);
