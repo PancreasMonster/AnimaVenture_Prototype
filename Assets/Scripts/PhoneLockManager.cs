@@ -13,6 +13,7 @@ public class PhoneLockManager : MonoBehaviour {
     public Button undo, finish;
     public Transform[] LRpoints;
     private PhoneLockScreen[] cells;
+    private BoxCollider[] cellCols;
     public Color LRColour;
     private float r, g, b;
     public Slider slider1, slider2, slider3;
@@ -22,6 +23,7 @@ public class PhoneLockManager : MonoBehaviour {
     {
         DontDestroyOnLoad(this.gameObject);
         cells = GetComponentsInChildren<PhoneLockScreen>();
+        cellCols = GetComponentsInChildren<BoxCollider>();
     }
 
     void Update()
@@ -59,6 +61,10 @@ public class PhoneLockManager : MonoBehaviour {
     {
         LR.positionCount -= 2;
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+        for (int i = 0; i < cellCols.Length; i++)
+        {
+            cellCols[i].enabled = false;
+        }
         sceneTransition = true;
     }
 

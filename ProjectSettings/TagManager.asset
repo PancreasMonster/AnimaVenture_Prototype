@@ -19,6 +19,7 @@ TagManager:
   - Button8
   - Button9
   - ColourByNumbers
+  - ColourSlider
   layers:
   - Default
   - TransparentFX
