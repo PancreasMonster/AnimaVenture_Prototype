@@ -22,5 +22,10 @@ public class MouseFollow : MonoBehaviour {
                 aud.Play();
             }
         }
+
+        if (Input.GetMouseButtonUp (0))
+        {
+            aud.Stop();
+        }
 	}
 }
