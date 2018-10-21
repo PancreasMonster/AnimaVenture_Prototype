@@ -21,6 +21,7 @@ TagManager:
   - ColourByNumbers
   - ColourSlider
   - BG Music
+  - RelaxPercussion
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,7 @@ public class PhoneLockScreen : MonoBehaviour
     Ray line;
     LineRenderer LR;
     public PhoneLockManager plm;
+    private GameObject aud;
     //private bool colourChanger;
 
     void Start()
@@ -27,7 +28,8 @@ public class PhoneLockScreen : MonoBehaviour
             m_Renderer = GetComponent<MeshRenderer>();
             //Fetch the original color of the GameObject
             m_OriginalColor = m_Renderer.material.color;
-      //  LR = GetComponent<LineRenderer>();
+        //  LR = GetComponent<LineRenderer>();
+        aud = GameObject.FindGameObjectWithTag("RelaxPercussion");
         }
 
     public void Update()
@@ -62,7 +64,8 @@ public class PhoneLockScreen : MonoBehaviour
             plm.second += 1;
             plm.posCounter += 1;
 
-
+            GameObject clone = Instantiate(aud, transform.position, Quaternion.identity);
+            Destroy(clone, 2);
 
             
 
