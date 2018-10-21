@@ -14,11 +14,10 @@ public class PhoneLockScreen : MonoBehaviour
         //Get the GameObject’s mesh renderer to access the GameObject’s material and color
         MeshRenderer m_Renderer;
 
-    bool unselected = false;
-    bool link = false;
+    public bool unselected = false;
+    public bool link = false;
     Ray line;
     LineRenderer LR;
-  //  public GameObject col1, col2;
     public PhoneLockManager plm; 
 
     void Start()
@@ -33,7 +32,19 @@ public class PhoneLockScreen : MonoBehaviour
     public void Update()
     {
         line = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (plm.startSequence == true && link == false)
+        {
+            LR = GameObject.FindGameObjectWithTag("PhoneCell").GetComponent<LineRenderer>();
+            link = true;
+        }
 
+        if (gameObject.GetComponent<LineRenderer>() == null)
+            return;
+
+        for (int i = 0; i < LR.positionCount; i ++)
+        {
+            LR.SetPosition(i, plm.LRpoints[i].position);
+        }
     }
 
     void OnMouseOver()
@@ -50,8 +61,7 @@ public class PhoneLockScreen : MonoBehaviour
 
 
 
-            if (gameObject.GetComponent<LineRenderer>() == null)
-                return;
+            
 
 
 
@@ -61,8 +71,11 @@ public class PhoneLockScreen : MonoBehaviour
 
                 if (LR.positionCount > plm.posCount)
                 {
-                    LR.SetPosition(plm.first, transform.position);
+                    plm.AddTransforms(GetComponent<Transform>());
                     LR.SetPosition(plm.second, line.origin);
+
+                    if (gameObject.GetComponent<LineRenderer>() == null)
+                        return;
                     plm.posCount += 1;
 
                 }
@@ -72,7 +85,6 @@ public class PhoneLockScreen : MonoBehaviour
 
     void OnMouseExit()
      {
-     // Reset the color of the GameObject back to normal
      m_Renderer.material.color = m_OriginalColor;
      }
 
@@ -83,21 +95,28 @@ public class PhoneLockScreen : MonoBehaviour
             LR = gameObject.AddComponent<LineRenderer>();
             plm.startSequence = true;
             LR.positionCount = 2;
-            plm.first -= 1;
-            plm.second -= 1;
             unselected = true;
+            gameObject.tag = ("PhoneCell");
+            plm.posCounter += 1;
         }
+
+        if (gameObject.GetComponent<LineRenderer>() == null)
+            return;
+
         if (LR.positionCount > 2)
-        {
-            LR.SetPosition(plm.second, line.origin);
-        } else
-        {
-            LR.SetPosition(1, line.origin);
-        }
-        LR.positionCount = plm.posCounter;
-        LR.startWidth = .2f;
-        LR.endWidth = .2f;
-        LR.SetPosition(0, transform.position);
+            {
+                LR.SetPosition(plm.second, line.origin);
+            }
+            else
+            {
+                LR.SetPosition(1, line.origin);
+            }
+            LR.positionCount = plm.posCounter;
+            LR.startColor = (Color.blue);
+            LR.endColor = (Color.blue);
+            LR.startWidth = .2f;
+            LR.endWidth = .2f;
+            LR.SetPosition(0, transform.position);
     }
 
    
@@ -106,8 +125,7 @@ public class PhoneLockScreen : MonoBehaviour
     {
         if (link == false)
         {
-            //LR.SetPosition(7, transform.position);
-            //LR.SetPosition(8, transform.position);
+            
         }
     }
 }

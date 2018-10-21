@@ -82,6 +82,7 @@ namespace Fungus
             eventDispatcher.Raise(new DragEntered.DragEnteredEvent(this, other));
 
             map.notDragging = false;
+            gameObject.layer = 5;
           //  Debug.Log("Hit");
         }
 
@@ -96,6 +97,7 @@ namespace Fungus
 
             eventDispatcher.Raise(new DragExited.DragExitedEvent(this, other));
              map.notDragging = true;
+            gameObject.layer = 4;
         }
 
         protected virtual void DoBeginDrag()
@@ -129,6 +131,7 @@ namespace Fungus
             updatePosition = true;
           
             map.notDragging = false;
+            gameObject.layer = 5;
         }
 
         protected virtual void DoEndDrag()
@@ -139,6 +142,7 @@ namespace Fungus
             }
 
             map.notDragging = true;
+            gameObject.layer = 4;
             var eventDispatcher = FungusManager.Instance.EventDispatcher;
             bool dragCompleted = false;
 
