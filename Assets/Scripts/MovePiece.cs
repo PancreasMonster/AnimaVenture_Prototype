@@ -6,10 +6,14 @@ public class MovePiece : MonoBehaviour
 {
     public bool pickedup = false;
     public bool placed = false;
+    //public Vector2 start;
+
+    public GameObject Remove;
+    public GameObject Create;
     // Use this for initialization
     void Start()
     {
-
+        //start = this.transform.position;
     }
 
     // Update is called once per frame
@@ -39,10 +43,14 @@ public class MovePiece : MonoBehaviour
         {
             if (other.gameObject.name == gameObject.name)
             {
-                transform.position = other.gameObject.transform.position;
-                placed = true;
                 Jigsaw.piecesleft -= 1;
-                Destroy(this);
+                Create.SetActive(true);
+                Remove.SetActive(false);
+                this.gameObject.SetActive(false);
+            }
+            else
+            {
+                transform.position = transform.parent.position;
             }
         }
     }
