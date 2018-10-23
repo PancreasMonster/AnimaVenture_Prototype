@@ -14,7 +14,7 @@ public class AvatarAnim : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //LerpTarget(target);
-        originalPos = transform.position;
+        originalPos = Camera.main.WorldToViewportPoint(transform.position);
         Debug.Log(originalPos);
 	}
 	
@@ -37,9 +37,10 @@ public class AvatarAnim : MonoBehaviour {
 
     public void StopLerp ()
     {
-        //theta = 0;
+        theta = 0;
         startLerping = false;
-        //transform.position = originalPos;
-        Debug.Log(lerpTowards);
+        transform.position = Camera.main.ViewportToWorldPoint(originalPos);
+       // Debug.Log(lerpTowards);
     }
+
 }
