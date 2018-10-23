@@ -139,11 +139,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 349416900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73a42d0c8662e4244a81ac97946b1c1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fe525485ca1774459c24066dd243977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Distance: 10
-  aud: {fileID: 2000201155}
 --- !u!199 &349416902
 ParticleSystemRenderer:
   serializedVersion: 6
