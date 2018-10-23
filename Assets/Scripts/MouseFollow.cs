@@ -13,14 +13,11 @@ public class MouseFollow : MonoBehaviour {
         {
 
 
-            Ray ray;
-            RaycastHit hit;
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 100.0f))
-            {
-                transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z + 1);
-            }
-            if (!aud.isPlaying && aud != null)
+            Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Vector3 pos = r.GetPoint(Distance);
+
+            transform.position = pos;
+            if(!aud.isPlaying && aud != null) 
             {
                 aud.Play();
             }

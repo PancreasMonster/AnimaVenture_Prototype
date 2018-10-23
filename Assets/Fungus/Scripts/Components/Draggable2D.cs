@@ -36,7 +36,7 @@ namespace Fungus
         [Tooltip("Use the UI Event System to check for drag events. Clicks that hit an overlapping UI object will be ignored. Camera must have a PhysicsRaycaster component, or a Physics2DRaycaster for 2D colliders.")]
         [SerializeField] protected bool useEventSystem;
 
-        public Vector3 startingPosition;
+        protected Vector3 startingPosition;
         protected bool updatePosition = false;
         protected Vector3 newPosition;
         protected Vector3 delta = Vector3.zero;
