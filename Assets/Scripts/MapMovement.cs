@@ -44,8 +44,8 @@ public class MapMovement : MonoBehaviour {
             transform.Translate(-move, Space.Self);
             transform.position = new Vector3(
             Mathf.Clamp(transform.position.x, MIN_X, MAX_X), Mathf.Clamp(transform.position.y, MIN_Y, MAX_Y), -15);
-            Debug.Log(pos);
-            Debug.Log(move);
+            //Debug.Log(pos);
+           // Debug.Log(move);
         }
     }
 
