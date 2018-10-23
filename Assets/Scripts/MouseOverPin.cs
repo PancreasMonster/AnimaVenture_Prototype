@@ -5,10 +5,11 @@ using UnityEngine;
 public class MouseOverPin : MonoBehaviour {
 
     public GameObject sprite;
+    AvatarAnim avAnim;
 
 	// Use this for initialization
 	void Start () {
-		
+        avAnim = GameObject.FindGameObjectWithTag("Enemy").GetComponent<AvatarAnim>();
 	}
 	
 	// Update is called once per frame
@@ -21,8 +22,14 @@ public class MouseOverPin : MonoBehaviour {
         sprite.SetActive(true);
     }
 
+    void OnMouseEnter()
+    {
+        avAnim.LerpTarget(transform.position);
+    }
+
     void OnMouseExit()
     {
         sprite.SetActive(false);
+        avAnim.StopLerp();
     }
 }
