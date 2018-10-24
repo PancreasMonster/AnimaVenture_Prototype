@@ -20,7 +20,7 @@ public class PhoneLockParticleSystem : MonoBehaviour {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z + 1);
+                transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
             }
             if (!aud.isPlaying && aud != null)
             {
