@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1656,7 +1656,6 @@ MonoBehaviour:
   returnDuration: 1
   hoverCursor: {fileID: 0}
   useEventSystem: 0
-  startingPosition: {x: 0, y: 0, z: 0}
   map: {fileID: 534669907}
 --- !u!50 &626245658
 Rigidbody2D:
@@ -1904,7 +1903,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 89eff998af6c6074bbb68fea49374010, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2848,7 +2847,6 @@ MonoBehaviour:
   returnDuration: 0
   hoverCursor: {fileID: 0}
   useEventSystem: 0
-  startingPosition: {x: 0, y: 0, z: 0}
   map: {fileID: 534669907}
 --- !u!50 &1028529092
 Rigidbody2D:
@@ -4935,7 +4933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1743774773
 Transform:
   m_ObjectHideFlags: 0
