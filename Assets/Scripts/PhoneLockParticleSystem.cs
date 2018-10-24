@@ -7,6 +7,7 @@ public class PhoneLockParticleSystem : MonoBehaviour {
 
     public float Distance = 10;
     public AudioSource aud;
+    public float distance;
 
     // Update is called once per frame
     void Update()
@@ -20,7 +21,7 @@ public class PhoneLockParticleSystem : MonoBehaviour {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+                transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z + distance);
             }
             if (!aud.isPlaying && aud != null)
             {
