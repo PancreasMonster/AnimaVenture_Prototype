@@ -143,11 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Distance: 10
-<<<<<<< HEAD
   aud: {fileID: 0}
-=======
-  aud: {fileID: 2000201155}
->>>>>>> 1d126977730ca6369491fa2127ef806b3a3835dd
 --- !u!199 &349416902
 ParticleSystemRenderer:
   serializedVersion: 6
