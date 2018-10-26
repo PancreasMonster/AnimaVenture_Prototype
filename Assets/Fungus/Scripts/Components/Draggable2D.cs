@@ -67,6 +67,28 @@ namespace Fungus
             {
                 transform.position = newPosition;
                 updatePosition = false;
+
+                
+            }
+        }
+
+        void Update ()
+        {
+
+            if (Input.GetMouseButton(0))
+            {
+
+
+                Ray ray;
+                RaycastHit hit;
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 100.0f))
+                {
+                    Debug.Log("Hit");
+
+
+                }
+
             }
         }
 
@@ -197,22 +219,20 @@ namespace Fungus
 
         #region Legacy OnMouseX methods
 
-        protected virtual void OnMouseDown()
+       protected virtual void OnMouseDown()
         {
-            if (!useEventSystem)
-            {
-                DoBeginDrag();
-            }
+            
         }
 
         protected virtual void OnMouseDrag()
         {
             if (!useEventSystem)
             {
-                DoDrag();
+             //   DoDrag();
             }
         }
 
+        /*
         protected virtual void OnMouseUp()
         {
             if (!useEventSystem)
@@ -235,7 +255,7 @@ namespace Fungus
             {
                 DoPointerExit();
             }
-        }
+        } */
 
         #endregion
 

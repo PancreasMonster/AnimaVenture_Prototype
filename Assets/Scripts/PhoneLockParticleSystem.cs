@@ -25,7 +25,7 @@ public class PhoneLockParticleSystem : MonoBehaviour {
                 transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z + distance);
 
                 transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z + 1);
-/* parent of 06bfbb4... Merge branch 'Testing' of https://github.com/PancreasMonster/AnimaVenture_Prototype into Testing*/
+
             }
             if (!aud.isPlaying && aud != null)
             {
