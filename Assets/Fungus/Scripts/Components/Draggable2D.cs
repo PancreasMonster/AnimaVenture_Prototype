@@ -103,7 +103,7 @@ namespace Fungus
                 hit = Physics2D.Raycast(rayPos, Vector2.zero, 100);
                 if (hit)
                 {
-                    if (!useEventSystem)
+                    if (hit.transform.tag == "Enemy")
                     {
 
 

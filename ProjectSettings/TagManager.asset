@@ -22,6 +22,7 @@ TagManager:
   - ColourSlider
   - BG Music
   - RelaxPercussion
+  - AncientSite
   layers:
   - Default
   - TransparentFX
