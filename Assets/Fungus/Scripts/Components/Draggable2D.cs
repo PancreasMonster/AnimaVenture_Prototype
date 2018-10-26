@@ -5,6 +5,7 @@
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace Fungus
 {
@@ -41,6 +42,8 @@ namespace Fungus
         protected Vector3 newPosition;
         protected Vector3 delta = Vector3.zero;
         public MapMovement map;
+        bool pickUp;
+        Vector3 originalPos;
 
         #region DragCompleted handlers
         protected List<DragCompleted> dragCompletedHandlers = new List<DragCompleted>();
@@ -72,25 +75,91 @@ namespace Fungus
             }
         }
 
+        void Start()
+        {
+            //LerpTarget(target);
+            originalPos = Camera.main.WorldToViewportPoint(transform.position);
+            StartCoroutine(startMap());
+            // Debug.Log(originalPos);
+        }
+
+       IEnumerator startMap ()
+        {
+            yield return new WaitForSeconds(Time.deltaTime);
+            map.enabled = true;
+            //Debug.Log("Enable");
+        }
+
         void Update ()
         {
 
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown (0))
             {
 
 
-                Ray ray;
-                RaycastHit hit;
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, 100.0f))
+                //Ray2D ray;
+                RaycastHit2D hit;
+                Vector2 rayPos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
+                hit = Physics2D.Raycast(rayPos, Vector2.zero, 100);
+                if (hit)
                 {
-                    Debug.Log("Hit");
+                    if (!useEventSystem)
+                    {
 
 
+                        //DoBeginDrag();
+                        pickUp = true;
+                    }
                 }
 
             }
-        }
+
+            if (pickUp)
+            {
+                if (!useEventSystem)
+                {
+
+                    float x = Input.mousePosition.x;
+                    float y = Input.mousePosition.y;
+                    float z = transform.position.z;
+
+                    transform.position = Camera.main.ScreenToWorldPoint(new Vector3(x, y, 10f));
+                    this.gameObject.layer = 5;
+                    map.notDragging = false;
+                }
+            }
+
+            if (Input.GetMouseButtonUp (0) && pickUp)
+            {
+                if (!useEventSystem)
+                {
+
+                    //DoEndDrag();
+                    gameObject.layer = 4;
+                    map.notDragging = true;
+                    pickUp = false;
+                    Debug.Log("Yes");
+                    transform.position = Camera.main.ViewportToWorldPoint(originalPos);
+
+                    var eventDispatcher = FungusManager.Instance.EventDispatcher;
+                    bool dragCompleted = false;
+
+                    for (int i = 0; i < dragCompletedHandlers.Count; i++)
+                    {
+                        var handler = dragCompletedHandlers[i];
+                        if (handler != null && handler.DraggableObject == this)
+                        {
+                            if (handler.IsOverTarget())
+                            {
+                                dragCompleted = true;
+
+                                eventDispatcher.Raise(new DragCompleted.DragCompletedEvent(this));
+                            }
+                        }
+                    }
+                }
+            }
+        } 
 
         protected virtual void OnTriggerEnter2D(Collider2D other) 
         {
@@ -219,20 +288,20 @@ namespace Fungus
 
         #region Legacy OnMouseX methods
 
-       protected virtual void OnMouseDown()
+      /* protected virtual void OnMouseDown()
         {
-            
+            DoBeginDrag();
         }
 
         protected virtual void OnMouseDrag()
         {
             if (!useEventSystem)
             {
-             //   DoDrag();
+               DoDrag();
             }
         }
 
-        /*
+        
         protected virtual void OnMouseUp()
         {
             if (!useEventSystem)
@@ -255,8 +324,8 @@ namespace Fungus
             {
                 DoPointerExit();
             }
-        } */
-
+        } 
+        */
         #endregion
 
         #region Public members

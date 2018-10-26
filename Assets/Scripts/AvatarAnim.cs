@@ -15,7 +15,7 @@ public class AvatarAnim : MonoBehaviour {
 	void Start () {
         //LerpTarget(target);
         originalPos = Camera.main.WorldToViewportPoint(transform.position);
-        Debug.Log(originalPos);
+       // Debug.Log(originalPos);
 	}
 	
 	// Update is called once per frame

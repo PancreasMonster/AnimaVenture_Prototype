@@ -5,20 +5,32 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
 
-    public Transform trackingUI;
-    public Camera cam;
-    Vector3 restingPlace;
-
     // Use this for initialization
     void Start()
     {
-        restingPlace = new Vector3(75, 100, 5);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = cam.ScreenToWorldPoint(restingPlace);
+
+
+        if (Input.GetMouseButton(0))
+        {
+
+
+            Ray ray;
+            RaycastHit hit;
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 10000.0f))
+            {
+                Debug.Log("Hit");
+
+
+            }
+
+        }
     }
 
 }
