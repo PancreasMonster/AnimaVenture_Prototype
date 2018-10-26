@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ReloadScene : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GameObject NewJigsaw;
+    //public GameObject NewJigsaw;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -15,8 +18,10 @@ public class ReloadScene : MonoBehaviour {
 		
 	}
 
-    public void ReloadSceene ()
+    public void ReloadSceene()
     {
+        JoinTheDots.dotn = 0;
+        Jigsaw.piecesleft = 0;
         SceneManager.LoadScene("AncientSiteScene");
     }
 }

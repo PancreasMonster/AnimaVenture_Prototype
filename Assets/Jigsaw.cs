@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Jigsaw : MonoBehaviour {
-    public static int piecesleft = 4;
+    public static int piecesleft = 0;
     public string sceneName;
 	// Use this for initialization
 	void Start () {
@@ -13,7 +13,7 @@ public class Jigsaw : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (piecesleft == 0)
+        if (piecesleft == 4)
         {
             SceneManager.LoadScene(sceneName);
         }

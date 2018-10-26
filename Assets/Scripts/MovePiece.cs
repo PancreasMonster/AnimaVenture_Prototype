@@ -43,7 +43,7 @@ public class MovePiece : MonoBehaviour
         {
             if (other.gameObject.name == gameObject.name)
             {
-                Jigsaw.piecesleft -= 1;
+                Jigsaw.piecesleft += 1;
                 Create.SetActive(true);
                 Remove.SetActive(false);
                 this.gameObject.SetActive(false);
