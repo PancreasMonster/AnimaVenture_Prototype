@@ -60,7 +60,7 @@ public class PhoneLockManager : MonoBehaviour {
     public void NextScene ()
     {
         LR.positionCount -= 2;
-        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+        //SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         for (int i = 0; i < cellCols.Length; i++)
         {
             cellCols[i].enabled = false;

@@ -960,12 +960,12 @@ RectTransform:
   m_Children:
   - {fileID: 1585455678}
   - {fileID: 774868693}
-  - {fileID: 1882417252}
   - {fileID: 2135154312}
   - {fileID: 713196696}
   - {fileID: 1858136836}
   - {fileID: 1026052467}
   - {fileID: 671562765}
+  - {fileID: 1882417252}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1098,7 +1098,7 @@ RectTransform:
   m_Children:
   - {fileID: 1295116423}
   m_Father: {fileID: 439992885}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1221,7 +1221,7 @@ RectTransform:
   - {fileID: 2057339449}
   - {fileID: 593050409}
   m_Father: {fileID: 439992885}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1593,7 +1593,7 @@ RectTransform:
   m_Children:
   - {fileID: 2111870029}
   m_Father: {fileID: 439992885}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2281,6 +2281,7 @@ GameObject:
   - component: {fileID: 1585455681}
   - component: {fileID: 1585455680}
   - component: {fileID: 1585455679}
+  - component: {fileID: 1585455682}
   m_Layer: 5
   m_Name: Finish to Next Scene
   m_TagString: Untagged
@@ -2346,8 +2347,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 84186199}
-        m_MethodName: NextScene
+      - m_Target: {fileID: 1585455682}
+        m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2356,6 +2357,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1882417251}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -2393,6 +2405,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1585455677}
   m_CullTransparentMesh: 0
+--- !u!114 &1585455682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1585455677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30db6ed0ac6d2ee4e9ac155e1329163a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 1882417255}
+  SceneName: SampleScene
 --- !u!1 &1595823868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2544,6 +2569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Distance: 10
   aud: {fileID: 0}
+  distance: 0
 --- !u!199 &1728429659
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -7311,7 +7337,7 @@ RectTransform:
   - {fileID: 993208301}
   - {fileID: 1155253039}
   m_Father: {fileID: 439992885}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7395,7 +7421,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 439992885}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7414,7 +7440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.54901963, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.55032945, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7445,7 +7471,7 @@ Animator:
   m_GameObject: {fileID: 1882417251}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a7111fe6ea01d334b816b4253695fe25, type: 2}
+  m_Controller: {fileID: 9100000, guid: 282707acaf63cb348937517b7cb1255a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8135,7 +8161,7 @@ RectTransform:
   - {fileID: 1968615989}
   - {fileID: 1522834902}
   m_Father: {fileID: 439992885}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
