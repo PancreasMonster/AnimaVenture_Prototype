@@ -11,6 +11,7 @@ public class MapMovement : MonoBehaviour {
     private Vector3 mouseOrigin;
     public bool isPanning;
     public float MIN_X, MAX_X, MIN_Y, MAX_Y;
+    public GameObject ripple;
 
 
     // Update is called once per frame
@@ -23,6 +24,7 @@ public class MapMovement : MonoBehaviour {
             //left click was pressed    
             mouseOrigin = Input.mousePosition;
             isPanning = true;
+            Instantiate(ripple);
             
         }
 
