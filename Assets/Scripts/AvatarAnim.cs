@@ -9,13 +9,17 @@ public class AvatarAnim : MonoBehaviour {
     Vector3 lerpTowards;
     Vector3 originalPos;
     bool startLerping;
+    public Transform particleTransform;
+    ParticleSystem ps;
     public Transform target;
 
 	// Use this for initialization
 	void Start () {
         //LerpTarget(target);
         originalPos = Camera.main.WorldToViewportPoint(transform.position);
-       // Debug.Log(originalPos);
+        // Debug.Log(originalPos);
+       // particleTransform = GetComponentInChildren<Transform>();
+        ps = GetComponentInChildren<ParticleSystem>();
 	}
 	
 	// Update is called once per frame
@@ -32,6 +36,11 @@ public class AvatarAnim : MonoBehaviour {
     {
         lerpTowards = target - transform.position;
         lerpTowards.Normalize();
+        particleTransform.rotation = Quaternion.LookRotation(lerpTowards);
+        if (!ps.isPlaying) 
+        ps.Play();
+        if(ps.isPlaying)
+        ps.startLifetime = Vector3.Distance(transform.position, target)/5;
         startLerping = true; 
     }
 
@@ -40,6 +49,7 @@ public class AvatarAnim : MonoBehaviour {
         theta = 0;
         startLerping = false;
         transform.position = Camera.main.ViewportToWorldPoint(originalPos);
+        ps.Stop();
        // Debug.Log(lerpTowards);
     }
 
