@@ -15,8 +15,8 @@ public class PhoneLockManager : MonoBehaviour {
     private PhoneLockScreen[] cells;
     private BoxCollider[] cellCols;
     public Color LRColour;
-    private float r, g, b;
-    public Slider slider1, slider2, slider3;
+    private float LRHue;
+    public Slider slider1;
 
 
     void Start()
@@ -48,11 +48,9 @@ public class PhoneLockManager : MonoBehaviour {
             AddTransforms(GameObject.FindGameObjectWithTag("PhoneCell").GetComponent<Transform>());
             checkForLR = true;
         }
-        r = slider1.value;
-        g = slider2.value;
-        b = slider3.value;
-        LRColour = new Color(r, g, b, 1);
-
+        LRHue = slider1.value;
+        LRColour = Color.HSVToRGB(LRHue, 1, 1);
+        slider1.image.color = Color.HSVToRGB(LRHue, 1, 1);
     }
 
 
