@@ -81,6 +81,7 @@ public class Colour_By_Numbers : MonoBehaviour {
         if (piecesCompleted >= maxPieces)
         {
             finishScene.SetActive(true);
+            this.gameObject.SetActive(false);
         }
     }
 
