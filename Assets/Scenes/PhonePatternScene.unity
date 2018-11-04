@@ -357,6 +357,7 @@ MonoBehaviour:
   - {fileID: 0}
   LRColour: {r: 0, g: 0, b: 0, a: 0}
   slider1: {fileID: 1858136837}
+  transitionAnim: {fileID: 1882417255}
 --- !u!4 &140598023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4829815891943576, guid: c14303f94b3b70542bf5df78e6258c4e,
@@ -1939,8 +1940,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1585455682}
-        m_MethodName: LoadNextScene
+      - m_Target: {fileID: 84186199}
+        m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

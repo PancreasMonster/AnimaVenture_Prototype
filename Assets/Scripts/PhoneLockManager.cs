@@ -17,6 +17,7 @@ public class PhoneLockManager : MonoBehaviour {
     public Color LRColour;
     private float LRHue;
     public Slider slider1;
+    public Animator transitionAnim;
 
 
     void Start()
@@ -53,12 +54,17 @@ public class PhoneLockManager : MonoBehaviour {
         slider1.image.color = Color.HSVToRGB(LRHue, 1, 1);
     }
 
-
-
-    public void NextScene ()
+    public void SceneChange ()
     {
+        StartCoroutine(NextScene());
+    }
+
+    IEnumerator NextScene ()
+    {
+        transitionAnim.SetTrigger("end");
+        yield return new WaitForSeconds(1.5f);
         LR.positionCount -= 2;
-        //SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         for (int i = 0; i < cellCols.Length; i++)
         {
             cellCols[i].enabled = false;
