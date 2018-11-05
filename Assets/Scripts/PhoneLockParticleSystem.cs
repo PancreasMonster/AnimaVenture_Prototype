@@ -24,7 +24,7 @@ public class PhoneLockParticleSystem : MonoBehaviour {
 
                 transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z + distance);
 
-                transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z + 1);
+                transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
 
             }
             if (!aud.isPlaying && aud != null)
