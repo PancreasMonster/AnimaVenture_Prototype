@@ -25,6 +25,11 @@ public class Colour_By_Numbers : MonoBehaviour {
         {
             GO.SetActive(false);
         }
+        if (Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            GO.SetActive(false);
+        }
+
     }
 
     /*public void OnMouseDown()
