@@ -20,9 +20,9 @@ public class PaintScript : MonoBehaviour {
         //colour = Color.HSVToRGB(hue, 1, 1);
         //slider.image.color = Color.HSVToRGB(hue, 1, 1);
 
-        //SpriteRenderer rend = GetComponent<SpriteRenderer>();
+        SpriteRenderer rend = GetComponent<SpriteRenderer>();
 
-        //rend.color = colour.GetComponent<Image>().color;
+        rend.color = colour.GetComponent<Image>().color;
     }
 	
 	// Update is called once per frame
