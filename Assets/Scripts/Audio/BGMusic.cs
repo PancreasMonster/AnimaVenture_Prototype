@@ -7,6 +7,7 @@ public class BGMusic : MonoBehaviour {
 
     public AudioSource aud;
     public float SecondsToFade = 1.5f;
+    public Animator anim;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,7 @@ public class BGMusic : MonoBehaviour {
 
     IEnumerator FadeInSound()
     {
-        
+        anim.SetBool("End", true);
         float rate = 1.0f / SecondsToFade;
 
         for (float x = 0.0f; x <= 1.0f; x += Time.deltaTime * rate)
