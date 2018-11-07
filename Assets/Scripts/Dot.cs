@@ -10,8 +10,11 @@ public class Dot : MonoBehaviour {
     {
         if(fill == false)
         {
-            fill = true;
-            JoinTheDots.dotn += 1;
+            if (Input.GetMouseButton(0))
+            {
+                fill = true;
+                JoinTheDots.dotn += 1;
+            }
         }
 
         
