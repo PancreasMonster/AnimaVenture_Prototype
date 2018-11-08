@@ -13,6 +13,10 @@ public class JoinTheDots : MonoBehaviour {
 
     // Update is called once per frame
     public void Update() {
+
+        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
+        Vector3 linePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
         if (dotn == 14)
         {
             Jigsaw.SetActive(true);
@@ -21,67 +25,92 @@ public class JoinTheDots : MonoBehaviour {
 
         if(dots[0].GetComponent<Dot>().fill == true)
         {
+            dots[0].GetComponent<LineRenderer>().SetPosition(1, linePosition);
             dots[1].SetActive(true);
         }
 
         if (dots[1].GetComponent<Dot>().fill == true)
         {
             dots[2].SetActive(true);
+            dots[0].GetComponent<LineRenderer>().enabled = false;
+            dots[1].GetComponent<LineRenderer>().SetPosition(1, linePosition);
         }
 
         if (dots[2].GetComponent<Dot>().fill == true)
         {
             dots[3].SetActive(true);
+            dots[2].GetComponent<LineRenderer>().SetPosition(1, linePosition);
+            dots[1].GetComponent<LineRenderer>().enabled = false;
         }
 
         if (dots[3].GetComponent<Dot>().fill == true)
         {
             dots[4].SetActive(true);
+            dots[3].GetComponent<LineRenderer>().SetPosition(1, linePosition);
+            dots[2].GetComponent<LineRenderer>().enabled = false;
         }
 
         if (dots[4].GetComponent<Dot>().fill == true)
         {
             dots[5].SetActive(true);
+            dots[4].GetComponent<LineRenderer>().SetPosition(1, linePosition);
+            dots[3].GetComponent<LineRenderer>().enabled = false;
         }
 
         if (dots[5].GetComponent<Dot>().fill == true)
         {
             dots[6].SetActive(true);
+            dots[5].GetComponent<LineRenderer>().SetPosition(1, linePosition);
+            dots[4].GetComponent<LineRenderer>().enabled = false;
         }
 
         if (dots[6].GetComponent<Dot>().fill == true)
         {
             dots[7].SetActive(true);
+            dots[6].GetComponent<LineRenderer>().SetPosition(1, linePosition);
+            dots[5].GetComponent<LineRenderer>().enabled = false;
         }
 
         if (dots[7].GetComponent<Dot>().fill == true)
         {
             dots[8].SetActive(true);
+            dots[7].GetComponent<LineRenderer>().SetPosition(1, linePosition);
+            dots[6].GetComponent<LineRenderer>().enabled = false;
         }
 
         if (dots[8].GetComponent<Dot>().fill == true)
         {
             dots[9].SetActive(true);
+            dots[8].GetComponent<LineRenderer>().SetPosition(1, linePosition);
+            dots[7].GetComponent<LineRenderer>().enabled = false;
         }
 
         if (dots[9].GetComponent<Dot>().fill == true)
         {
             dots[10].SetActive(true);
+            dots[9].GetComponent<LineRenderer>().SetPosition(1, linePosition);
+            dots[8].GetComponent<LineRenderer>().enabled = false;
         }
 
         if (dots[10].GetComponent<Dot>().fill == true)
         {
             dots[11].SetActive(true);
+            dots[10].GetComponent<LineRenderer>().SetPosition(1, linePosition);
+            dots[9].GetComponent<LineRenderer>().enabled = false;
         }
 
         if (dots[11].GetComponent<Dot>().fill == true)
         {
             dots[12].SetActive(true);
+            dots[11].GetComponent<LineRenderer>().SetPosition(1, linePosition);
+            dots[10].GetComponent<LineRenderer>().enabled = false;
         }
 
         if (dots[12].GetComponent<Dot>().fill == true)
         {
             dots[13].SetActive(true);
+            dots[12].GetComponent<LineRenderer>().SetPosition(1, linePosition);
+            dots[11].GetComponent<LineRenderer>().enabled = false;
         }
 
         if (dots[0].GetComponent<Dot>().fill == true && dots[1].GetComponent<Dot>().fill == true)
