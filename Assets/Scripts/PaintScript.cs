@@ -6,9 +6,8 @@ using UnityEngine.UI;
 public class PaintScript : MonoBehaviour {
 
     public GameObject colour;
-    //public Color colour;
-    //public float hue;
-    //public Slider slider;
+    public LineRenderer rend;
+    public Color LRcolour;
 
 	// Use this for initialization
 	void Start () {
@@ -16,17 +15,15 @@ public class PaintScript : MonoBehaviour {
         Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
         transform.position = objPosition;
 
-        //hue = slider.value;
-        //colour = Color.HSVToRGB(hue, 1, 1);
-        //slider.image.color = Color.HSVToRGB(hue, 1, 1);
+        rend = GetComponent<LineRenderer>();
 
-        SpriteRenderer rend = GetComponent<SpriteRenderer>();
-
-        rend.color = colour.GetComponent<Image>().color;
+        rend.SetPosition(0, objPosition);
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        LRcolour = colour.GetComponent<Image>().color;
+        //rend.SetColors(LRcolour, LRcolour);
+    }
 }
