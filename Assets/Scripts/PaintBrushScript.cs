@@ -35,7 +35,7 @@ public class PaintBrushScript : MonoBehaviour {
         else if (Input.GetMouseButtonUp(0))
         {
             StopAllCoroutines();
-            n = 1;
+            n = 0;
         }
         
 

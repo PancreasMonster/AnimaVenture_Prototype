@@ -24,6 +24,5 @@ public class PaintScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         LRcolour = colour.GetComponent<Image>().color;
-        //rend.SetColors(LRcolour, LRcolour);
     }
 }
