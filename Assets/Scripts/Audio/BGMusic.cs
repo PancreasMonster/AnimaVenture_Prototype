@@ -44,5 +44,6 @@ public class BGMusic : MonoBehaviour {
     {
         yield return new WaitForSeconds(SecondsToFade);
         SceneManager.LoadScene("PhonePatternScene", LoadSceneMode.Single);
+        anim.SetBool("End", false);
     }
 }
