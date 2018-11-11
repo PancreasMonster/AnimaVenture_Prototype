@@ -30,7 +30,22 @@ public class SceneTransition : MonoBehaviour {
 
     public void LoadAncientSite()
     {
-        bgm.ToAncientSite();
+        if (bgm != null)
+            bgm.ToAncientSite();
+        else
+        {
+            SceneManager.LoadScene("AncientSiteScene", LoadSceneMode.Single);
+        }
+    }
+
+    public void LoadJourney()
+    {
+        if (bgm != null)
+            bgm.ToJourneyScene();
+        else
+        {
+            SceneManager.LoadScene("JourneyScene", LoadSceneMode.Single);
+        }
     }
 
 }

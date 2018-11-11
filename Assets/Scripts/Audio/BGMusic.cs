@@ -44,6 +44,11 @@ public class BGMusic : MonoBehaviour {
         StartCoroutine(TransitionAncientSite());
     }
 
+    public void ToJourneyScene()
+    {
+        StartCoroutine(TransitionJourneyScene());
+    }
+
     IEnumerator FadeInSound()
     {
         anim.SetBool("End", true);
@@ -100,6 +105,14 @@ public class BGMusic : MonoBehaviour {
         anim.SetBool("End", true);
         yield return new WaitForSeconds(SecondsToFade);
         SceneManager.LoadScene("AncientSiteScene", LoadSceneMode.Single);
+        anim.SetBool("End", false);
+    }
+
+    IEnumerator TransitionJourneyScene()
+    {
+        anim.SetBool("End", true);
+        yield return new WaitForSeconds(SecondsToFade);
+        SceneManager.LoadScene("JourneyScene", LoadSceneMode.Single);
         anim.SetBool("End", false);
     }
 }
