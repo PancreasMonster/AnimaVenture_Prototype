@@ -63,6 +63,20 @@ public class BGMusic : MonoBehaviour {
        // SceneManager.LoadScene("PhonePatternScene", LoadSceneMode.Single);
     }
 
+    IEnumerator FadeOutSound()
+    {
+        
+        float rate = 1.0f / SecondsToFade;
+
+        for (float x = 0.0f; x <= 1.0f; x += Time.deltaTime * rate)
+        {
+            aud.volume = Mathf.Lerp(0, .1f, x);
+            yield return null;
+        }
+        //yield return new WaitForSeconds(SecondsToFade);
+        // SceneManager.LoadScene("PhonePatternScene", LoadSceneMode.Single);
+    }
+
     IEnumerator ZoomIn(Transform target)
     {
         float rate = 1.0f / SecondsToFade;
@@ -80,6 +94,7 @@ public class BGMusic : MonoBehaviour {
     IEnumerator TransitionToAvatar()
     {
         yield return new WaitForSeconds(SecondsToFade);
+        StartCoroutine(FadeOutSound());
         SceneManager.LoadScene("PhonePatternScene", LoadSceneMode.Single);
         anim.SetBool("End", false);
     }
