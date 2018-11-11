@@ -19,7 +19,13 @@ public class SceneTransition : MonoBehaviour {
 
     public void LoadNextScene()
     {
+        if (bgm != null)
         bgm.ToPaintByNumbers(target);
+        else
+        {
+            SceneManager.LoadScene("NewgrangeScene", LoadSceneMode.Single);
+        }
+        
     }
 
     public void LoadAncientSite()
