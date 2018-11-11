@@ -8,16 +8,23 @@ public class SceneTransition : MonoBehaviour {
 
     public Animator transitionAnim;
     public string SceneName;
+    BGMusic bgm;
+    public Transform target;
+    Camera mainCam;
+
+    private void Start()
+    {
+        bgm = GameObject.FindGameObjectWithTag("BG Music").GetComponent<BGMusic>();
+    }
 
     public void LoadNextScene()
     {
-        StartCoroutine(LoadScene());
+        bgm.ToPaintByNumbers(target);
     }
-    IEnumerator LoadScene()
+
+    public void LoadAncientSite()
     {
-        transitionAnim.SetTrigger("end");
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(SceneName);
+        bgm.ToAncientSite();
     }
 
 }
