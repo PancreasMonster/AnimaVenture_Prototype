@@ -26,6 +26,11 @@ public class BGMusic : MonoBehaviour {
         StartCoroutine(TransitionToAvatar());
     }
 
+    public void ToWorldScene()
+    {
+        StartCoroutine(TransitionToWorldScene());
+    }
+
     IEnumerator FadeInSound()
     {
         anim.SetBool("End", true);
@@ -44,6 +49,14 @@ public class BGMusic : MonoBehaviour {
     {
         yield return new WaitForSeconds(SecondsToFade);
         SceneManager.LoadScene("PhonePatternScene", LoadSceneMode.Single);
+        anim.SetBool("End", false);
+    }
+
+    IEnumerator TransitionToWorldScene()
+    {
+        anim.SetBool("End", true);
+        yield return new WaitForSeconds(SecondsToFade);
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         anim.SetBool("End", false);
     }
 }

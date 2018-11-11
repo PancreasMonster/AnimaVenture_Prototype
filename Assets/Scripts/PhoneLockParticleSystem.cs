@@ -35,7 +35,8 @@ public class PhoneLockParticleSystem : MonoBehaviour {
 
         if (Input.GetMouseButtonUp(0))
         {
-            aud.Stop();
+            if (aud != null)
+                aud.Stop();
         }
     }
 }

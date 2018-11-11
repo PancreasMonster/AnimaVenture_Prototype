@@ -18,6 +18,7 @@ public class PhoneLockManager : MonoBehaviour {
     private float LRHue;
     public Slider slider1;
     public Animator transitionAnim;
+    private BGMusic bgm;
 
 
     void Start()
@@ -25,6 +26,7 @@ public class PhoneLockManager : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
         cells = GetComponentsInChildren<PhoneLockScreen>();
         cellCols = GetComponentsInChildren<BoxCollider>();
+        bgm = GameObject.FindGameObjectWithTag("BG Music").GetComponent<BGMusic>();
     }
 
     void Update()
@@ -56,21 +58,16 @@ public class PhoneLockManager : MonoBehaviour {
 
     public void SceneChange ()
     {
-        StartCoroutine(NextScene());
-    }
-
-    IEnumerator NextScene ()
-    {
-        transitionAnim.SetTrigger("end");
-        yield return new WaitForSeconds(1.5f);
         LR.positionCount -= 2;
-        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+        bgm.ToWorldScene();
         for (int i = 0; i < cellCols.Length; i++)
         {
             cellCols[i].enabled = false;
         }
         sceneTransition = true;
     }
+
+   
 
     public void AddTransforms (Transform f)
     {
