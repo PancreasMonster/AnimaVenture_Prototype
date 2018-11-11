@@ -79,11 +79,11 @@ public class BGMusic : MonoBehaviour {
 
     IEnumerator ZoomIn(Transform target)
     {
-        float rate = 1.0f / SecondsToFade;
+        float rate = 1.0f / (SecondsToFade * 8);
 
         for (float x = 0.0f; x <= 1.0f; x += Time.deltaTime * rate)
         {
-            mainCam.transform.position = Vector3.Lerp(mainCam.transform.position, target.position, x);
+            mainCam.transform.position = Vector3.Lerp(mainCam.transform.position, new Vector3(target.position.x, target.position.y, mainCam.transform.position.z), x);
             mainCam.orthographicSize = Mathf.Lerp(mainCam.orthographicSize, 3, x);
             yield return null;
         }
@@ -109,6 +109,7 @@ public class BGMusic : MonoBehaviour {
 
     IEnumerator TransitionToPaintByNumbers()
     {
+        //yield return new WaitForSeconds(SecondsToFade);
         anim.SetBool("End", true);
         yield return new WaitForSeconds(SecondsToFade);
         SceneManager.LoadScene("NewgrangeScene", LoadSceneMode.Single);
