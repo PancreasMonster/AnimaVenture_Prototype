@@ -24,6 +24,8 @@ public class MovePiece : MonoBehaviour
             Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
             Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
             transform.position = objPosition;
+
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
@@ -51,6 +53,7 @@ public class MovePiece : MonoBehaviour
             else
             {
                 transform.position = transform.parent.position;
+                transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             }
         }
     }

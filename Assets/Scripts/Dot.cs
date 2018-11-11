@@ -25,4 +25,18 @@ public class Dot : MonoBehaviour {
 
         
     }
+
+    public void OnMouseDown()
+    {
+        if (fill == false)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                fill = true;
+                JoinTheDots.dotn += 1;
+            }
+        }
+
+
+    }
 }
