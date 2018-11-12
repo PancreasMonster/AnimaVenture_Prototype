@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlaySoundOnClick : MonoBehaviour {
 
-    public GameObject sprite;
     AvatarAnim avAnim;
     AudioSource aud;
 
