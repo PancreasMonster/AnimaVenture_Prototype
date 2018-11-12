@@ -21,6 +21,7 @@ public class PhoneLockScreen : MonoBehaviour
     public PhoneLockManager plm;
     private GameObject aud;
     Shader shader1;
+    Transform tran;
     //private bool colourChanger;
 
     void Start()
@@ -32,6 +33,7 @@ public class PhoneLockScreen : MonoBehaviour
         //  LR = GetComponent<LineRenderer>();
         aud = GameObject.FindGameObjectWithTag("RelaxPercussion");
         shader1 = Shader.Find("UI/Default");
+        tran = GetComponentInParent<Transform>();
         }
 
     public void Update()
@@ -48,7 +50,8 @@ public class PhoneLockScreen : MonoBehaviour
 
         LR.material.color = plm.LRColour;
         LR.material.shader = shader1;
-        LR.colorGradient.mode = GradientMode.Fixed; 
+        LR.colorGradient.mode = GradientMode.Fixed;
+       
         for (int i = 0; i < LR.positionCount; i ++)
         {
             LR.SetPosition(i, plm.LRpoints[i].position);
@@ -121,11 +124,12 @@ public class PhoneLockScreen : MonoBehaviour
                 LR.SetPosition(1, line.origin);
             }
             LR.positionCount = plm.posCounter;
-           // LR.startColor = (Color.blue);
-          //  LR.endColor = (Color.blue);
-            
-            LR.startWidth = .2f;
-            LR.endWidth = .2f;
+        // LR.startColor = (Color.blue);
+        //  LR.endColor = (Color.blue);
+        LR.startWidth = .2f; //tran.localScale.x / 5;
+        LR.endWidth = .2f; // tran.localScale.x / 5;
+        LR.numCornerVertices = 1;
+        LR.alignment = LineAlignment.TransformZ;
             LR.SetPosition(0, transform.position);
     }
 
