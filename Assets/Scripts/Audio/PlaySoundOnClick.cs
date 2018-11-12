@@ -25,11 +25,14 @@ public class PlaySoundOnClick : MonoBehaviour {
             hit = Physics2D.Raycast(rayPos, Vector2.zero, 100);
             if (hit)
             {
-                if (hit.transform.tag == "Sound")
+                if (hit.transform.tag == "Sound" && !hit.transform.gameObject.GetComponent<AudioSource>().isPlaying)
                 {
-                    if (!aud.isPlaying)
-                        aud.Play();
-                    Debug.Log("Apple");
+                    hit.transform.gameObject.GetComponent<AudioSource>().Play();
+                }
+
+                if (hit.transform.tag == "Untagged")
+                {
+                    GetComponent<SpriteRenderer>().enabled = false;
                 }
             }
         }
