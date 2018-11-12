@@ -29,11 +29,13 @@ public class BGMusic : MonoBehaviour {
 
     public void ToWorldScene()
     {
+        StartCoroutine(FadeInSound());
         StartCoroutine(TransitionToWorldScene());
     }
 
     public void ToPaintByNumbers(Transform target)
     {
+        StartCoroutine(FadeInSound());
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         StartCoroutine(ZoomIn(target));
         StartCoroutine(TransitionToPaintByNumbers());
@@ -41,17 +43,19 @@ public class BGMusic : MonoBehaviour {
 
     public void ToAncientSite()
     {
+        StartCoroutine(FadeInSound());
         StartCoroutine(TransitionAncientSite());
     }
 
     public void ToJourneyScene()
     {
+        StartCoroutine(FadeInSound());
         StartCoroutine(TransitionJourneyScene());
     }
 
     IEnumerator FadeInSound()
     {
-        anim.SetBool("End", true);
+        
         float rate = 1.0f / SecondsToFade;
 
         for (float x = 0.0f; x <= 1.0f; x += Time.deltaTime * rate)
@@ -93,6 +97,7 @@ public class BGMusic : MonoBehaviour {
 
     IEnumerator TransitionToAvatar()
     {
+        anim.SetBool("End", true);
         yield return new WaitForSeconds(SecondsToFade);
         StartCoroutine(FadeOutSound());
         SceneManager.LoadScene("PhonePatternScene", LoadSceneMode.Single);
@@ -103,6 +108,7 @@ public class BGMusic : MonoBehaviour {
     {
         anim.SetBool("End", true);
         yield return new WaitForSeconds(SecondsToFade);
+        StartCoroutine(FadeOutSound());
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         anim.SetBool("End", false);
     }
@@ -112,6 +118,7 @@ public class BGMusic : MonoBehaviour {
         //yield return new WaitForSeconds(SecondsToFade);
         anim.SetBool("End", true);
         yield return new WaitForSeconds(SecondsToFade);
+        StartCoroutine(FadeOutSound());
         SceneManager.LoadScene("NewgrangeScene", LoadSceneMode.Single);
         anim.SetBool("End", false);
     }
@@ -120,6 +127,7 @@ public class BGMusic : MonoBehaviour {
     {
         anim.SetBool("End", true);
         yield return new WaitForSeconds(SecondsToFade);
+        StartCoroutine(FadeOutSound());
         SceneManager.LoadScene("AncientSiteScene", LoadSceneMode.Single);
         anim.SetBool("End", false);
     }
@@ -128,6 +136,7 @@ public class BGMusic : MonoBehaviour {
     {
         anim.SetBool("End", true);
         yield return new WaitForSeconds(SecondsToFade);
+        StartCoroutine(FadeOutSound());
         SceneManager.LoadScene("JourneyScene", LoadSceneMode.Single);
         anim.SetBool("End", false);
     }
