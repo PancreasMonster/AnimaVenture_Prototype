@@ -23,6 +23,7 @@ TagManager:
   - BG Music
   - RelaxPercussion
   - AncientSite
+  - Sound
   layers:
   - Default
   - TransparentFX
