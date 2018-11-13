@@ -14,6 +14,7 @@ public class PaintScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        colour = GameObject.Find("Handle");
         rend = this.GetComponent<LineRenderer>();
         rend.positionCount = 0;
         LRcolour = colour.GetComponent<Image>().color;
