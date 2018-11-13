@@ -6,20 +6,16 @@ using UnityEngine.UI;
 public class PaintScript : MonoBehaviour {
 
     public GameObject colour;
-    public LineRenderer rend;
+    private LineRenderer rend;
     public Color LRcolour;
-    public Vector3 objPosition;
+    private Vector3 objPosition;
     int n = 0;
-    private bool start;
+    
 
 	// Use this for initialization
 	void Start () {
-        start = true;
-
+        rend = this.GetComponent<LineRenderer>();
         rend.positionCount = 0;
-
-        rend = GetComponent<LineRenderer>();
-
         LRcolour = colour.GetComponent<Image>().color;
 
         rend.GetComponent<LineRenderer>().SetColors(LRcolour, LRcolour);
@@ -33,18 +29,16 @@ public class PaintScript : MonoBehaviour {
         transform.position = objPosition;
 
         
-            if (Input.GetMouseButtonDown(0))
-            {
-                StartCoroutine(Paint());
-            }
-
-
-            else if (Input.GetMouseButtonUp(0))
-            {
-                StopAllCoroutines();
-                n = 0;
-                start = false;
-            }
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(Paint());
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            StopAllCoroutines();
+            n = 0;
+        }
+        
         
         
 
@@ -58,5 +52,6 @@ public class PaintScript : MonoBehaviour {
         yield return new WaitForSeconds(0.001f);
         StartCoroutine(Paint());
     }
+
     }
 
