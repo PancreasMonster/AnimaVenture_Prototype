@@ -720,6 +720,7 @@ MonoBehaviour:
   paint: {fileID: 1606155281442838, guid: 88d188d43d585b049a84fa0d08cf1e42, type: 2}
   LRColour: {r: 0, g: 0, b: 0, a: 0}
   slider1: {fileID: 1446631221}
+  n: 0
 --- !u!1 &895887574
 GameObject:
   m_ObjectHideFlags: 0

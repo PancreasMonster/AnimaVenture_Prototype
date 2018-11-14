@@ -34,15 +34,8 @@ public class PaintBrushScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(paint);
-            
             StartCoroutine(Paint());
         }
-        
-
-
-
-
-
     }
 
     IEnumerator Paint()
