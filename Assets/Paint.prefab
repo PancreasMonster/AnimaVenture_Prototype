@@ -57,9 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colour: {fileID: 0}
-  rend: {fileID: 120290287831729104}
   LRcolour: {r: 0, g: 0, b: 0, a: 0}
-  objPosition: {x: 0, y: 0, z: 0}
 --- !u!120 &120290287831729104
 LineRenderer:
   m_ObjectHideFlags: 1

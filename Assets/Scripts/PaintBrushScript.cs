@@ -10,6 +10,7 @@ public class PaintBrushScript : MonoBehaviour
     public Color LRColour;
     private float LRHue;
     public Slider slider1;
+    public int n = 0;
 
     Vector3 objPosition;
 
@@ -33,6 +34,8 @@ public class PaintBrushScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(paint);
+            
+            StartCoroutine(Paint());
         }
         
 
@@ -40,6 +43,15 @@ public class PaintBrushScript : MonoBehaviour
 
 
 
+    }
+
+    IEnumerator Paint()
+    {
+        GameObject.FindGameObjectWithTag("Paint").GetComponent<LineRenderer>().positionCount += 1;
+        GameObject.FindGameObjectWithTag("Paint").GetComponent<LineRenderer>().SetPosition(n, objPosition);
+        n += 1;
+        yield return new WaitForSeconds(0.001f);
+        StartCoroutine(Paint());
     }
 }
 

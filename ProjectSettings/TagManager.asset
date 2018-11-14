@@ -24,6 +24,7 @@ TagManager:
   - RelaxPercussion
   - AncientSite
   - Sound
+  - Paint
   layers:
   - Default
   - TransparentFX

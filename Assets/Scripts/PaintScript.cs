@@ -15,11 +15,11 @@ public class PaintScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         colour = GameObject.Find("Handle");
-        rend = this.GetComponent<LineRenderer>();
-        rend.positionCount = 0;
+        //rend = this.GetComponent<LineRenderer>();
+        //rend.positionCount = 0;
         LRcolour = colour.GetComponent<Image>().color;
-
-        rend.GetComponent<LineRenderer>().SetColors(LRcolour, LRcolour);
+        this.gameObject.tag = "Paint";
+        this.gameObject.GetComponent<LineRenderer>().SetColors(LRcolour, LRcolour);
     }
 	
 	// Update is called once per frame
@@ -29,22 +29,22 @@ public class PaintScript : MonoBehaviour {
         objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
         transform.position = objPosition;
 
-        
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartCoroutine(Paint());
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            StopAllCoroutines();
-            n = 0;
-        }
+        //if (this.gameObject.tag == "Paint")
+        //{
+            if (Input.GetMouseButtonUp(0))
+            {
+                //StopAllCoroutines();
+                this.gameObject.tag = "Untagged";
+                GameObject.Find("PaintBrush").GetComponent<PaintBrushScript>().n = 0;
+            }
+        //}
+        //else { }
         
         
         
 
     }
-
+    /*
     IEnumerator Paint()
     {
         this.gameObject.GetComponent<LineRenderer>().positionCount += 1;
@@ -53,6 +53,7 @@ public class PaintScript : MonoBehaviour {
         yield return new WaitForSeconds(0.001f);
         StartCoroutine(Paint());
     }
+    */
 
     }
 
