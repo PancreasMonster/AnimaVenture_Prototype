@@ -15,7 +15,7 @@ public class PhoneLockScreen : MonoBehaviour
         MeshRenderer m_Renderer;
 
     public bool unselected = false;
-    public bool link = false;
+    public bool link = false, linking = true;
     Ray line;
     LineRenderer LR;
     public PhoneLockManager plm;
@@ -45,16 +45,23 @@ public class PhoneLockScreen : MonoBehaviour
             link = true;
         }
 
-        if (gameObject.GetComponent<LineRenderer>() == null)
-            return;
-
-        LR.material.color = plm.LRColour;
-        LR.material.shader = shader1;
-        LR.colorGradient.mode = GradientMode.Fixed;
-       
-        for (int i = 0; i < LR.positionCount; i ++)
+        if (gameObject.GetComponent<LineRenderer>() != null)
         {
-            LR.SetPosition(i, plm.LRpoints[i].position);
+            
+            if(Input.GetMouseButtonUp(0) && linking == true)
+            {
+                LR.positionCount -= 2;
+                linking = false; 
+            }
+
+            LR.material.color = plm.LRColour;
+            LR.material.shader = shader1;
+            LR.colorGradient.mode = GradientMode.Fixed;
+
+            for (int i = 0; i < LR.positionCount; i++)
+            {
+                LR.SetPosition(i, plm.LRpoints[i].position);
+            }
         }
     }
 
@@ -110,10 +117,13 @@ public class PhoneLockScreen : MonoBehaviour
             unselected = true;
             gameObject.tag = ("PhoneCell");
             plm.posCounter += 1;
+            
         }
 
         if (gameObject.GetComponent<LineRenderer>() == null)
             return;
+
+        linking = true;
 
         if (LR.positionCount > 2)
             {
