@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9020,6 +9020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unselected: 0
   link: 0
+  linking: 1
   plm: {fileID: 0}
 --- !u!1 &449131537
 GameObject:
@@ -10766,10 +10767,10 @@ MonoBehaviour:
   notDragging: 1
   panSpeed: 1
   isPanning: 0
-  MIN_X: 3.094201
-  MAX_X: 27.22186
-  MIN_Y: -9.097695
-  MAX_Y: 2.797675
+  MIN_X: 0
+  MAX_X: 30.22186
+  MIN_Y: -11.0977
+  MAX_Y: 4.797675
   ripple: {fileID: 20424737}
 --- !u!1 &535496773
 GameObject:
