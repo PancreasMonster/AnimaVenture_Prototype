@@ -22,6 +22,7 @@ public class PhoneLockScreen : MonoBehaviour
     private GameObject aud;
     Shader shader1;
     Transform tran;
+    ParticleSystem ps;
     //private bool colourChanger;
 
     void Start()
@@ -34,6 +35,7 @@ public class PhoneLockScreen : MonoBehaviour
         aud = GameObject.FindGameObjectWithTag("RelaxPercussion");
         shader1 = Shader.Find("UI/Default");
         tran = GetComponentInParent<Transform>();
+        ps = GetComponent<ParticleSystem>();
         }
 
     public void Update()
@@ -77,11 +79,18 @@ public class PhoneLockScreen : MonoBehaviour
             plm.second += 1;
             plm.posCounter += 1;
 
-            GameObject clone = Instantiate(aud, transform.position, Quaternion.identity);
-            Destroy(clone, 2);
+            //GameObject clone = Instantiate(aud, transform.position, Quaternion.identity);
+            // Destroy(clone, 2);
 
+            var col = ps.colorOverLifetime;
+            col.enabled = true;
+
+            Gradient grad = new Gradient();
+            grad.SetKeys(new GradientColorKey[] { new GradientColorKey(plm.LRColour, 0.0f), new GradientColorKey(plm.LRColour, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.0f, 1.0f) });
+            col.color = grad;
+            ps.Play();
+            StartCoroutine(StopPS());
             
-
 
 
             if (LR.positionCount > 0)
@@ -117,7 +126,16 @@ public class PhoneLockScreen : MonoBehaviour
             unselected = true;
             gameObject.tag = ("PhoneCell");
             plm.posCounter += 1;
-            
+
+            var col = ps.colorOverLifetime;
+            col.enabled = true;
+
+            Gradient grad = new Gradient();
+            grad.SetKeys(new GradientColorKey[] { new GradientColorKey(plm.LRColour, 0.0f), new GradientColorKey(plm.LRColour, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.0f, 1.0f) });
+            col.color = grad;
+            ps.Play();
+            StartCoroutine(StopPS());
+
         }
 
         if (gameObject.GetComponent<LineRenderer>() == null)
@@ -152,5 +170,11 @@ public class PhoneLockScreen : MonoBehaviour
         {
             
         }
+    }
+
+    IEnumerator StopPS()
+    {
+        yield return new WaitForSeconds(Time.deltaTime);
+        ps.Stop();
     }
 }
