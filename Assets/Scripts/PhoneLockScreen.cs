@@ -12,7 +12,7 @@ public class PhoneLockScreen : MonoBehaviour
         Color m_OriginalColor;
 
         //Get the GameObject’s mesh renderer to access the GameObject’s material and color
-        MeshRenderer m_Renderer;
+     //   MeshRenderer m_Renderer;
 
     public bool unselected = false;
     public bool link = false, linking = true;
@@ -27,9 +27,9 @@ public class PhoneLockScreen : MonoBehaviour
     void Start()
         {
             //Fetch the mesh renderer component from the GameObject
-            m_Renderer = GetComponent<MeshRenderer>();
+           // m_Renderer = GetComponent<MeshRenderer>();
             //Fetch the original color of the GameObject
-            m_OriginalColor = m_Renderer.material.color;
+          //  m_OriginalColor = m_Renderer.material.color;
         //  LR = GetComponent<LineRenderer>();
         aud = GameObject.FindGameObjectWithTag("RelaxPercussion");
         shader1 = Shader.Find("UI/Default");
@@ -104,7 +104,7 @@ public class PhoneLockScreen : MonoBehaviour
 
     void OnMouseExit()
      {
-     m_Renderer.material.color = m_OriginalColor;
+    // m_Renderer.material.color = m_OriginalColor;
      }
 
     public void OnMouseDrag()
@@ -141,6 +141,7 @@ public class PhoneLockScreen : MonoBehaviour
         LR.numCornerVertices = 1;
         LR.alignment = LineAlignment.TransformZ;
             LR.SetPosition(0, transform.position);
+        LR.sortingOrder = -1;
     }
 
    
