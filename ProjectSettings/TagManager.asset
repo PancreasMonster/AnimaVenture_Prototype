@@ -25,6 +25,7 @@ TagManager:
   - AncientSite
   - Sound
   - Paint
+  - PaintHere
   layers:
   - Default
   - TransparentFX
