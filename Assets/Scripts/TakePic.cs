@@ -29,18 +29,20 @@ public class TakePic : MonoBehaviour {
             RenderTexture.active = null;
             Destroy(rt);
             byte[] bytes = screenShot.EncodeToPNG();
-            string filename = ScreenShotName(resWidth, resHeight);
-            System.IO.File.WriteAllBytes(filename, bytes);
+            //string filename = Screen("Picture");
+            //System.IO.File.WriteAllBytes(filename, bytes);
             takeshot = false;
         }
 
 	}
-
-    public void Screen(string s)
+    /*
+    public string Screen(string s)
     {
         takeshot = true;
     }
-
+    */
+    
+    /*
     public string ScreenShotName(int width, int height)
     {
         return string.Format("Drawings",
@@ -48,4 +50,5 @@ public class TakePic : MonoBehaviour {
                              width, height,
                              System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
     }
+    */
 }
