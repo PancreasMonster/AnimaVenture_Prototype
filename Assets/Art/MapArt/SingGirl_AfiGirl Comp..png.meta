@@ -1,0 +1,394 @@
+fileFormatVersion: 2
+guid: dd8f2bbd1505a724d8c1c01aa575d660
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SingGirl_AfiGirl Comp._0
+    21300002: SingGirl_AfiGirl Comp._1
+    21300004: SingGirl_AfiGirl Comp._2
+    21300006: SingGirl_AfiGirl Comp._3
+    21300008: SingGirl_AfiGirl Comp._4
+    21300010: SingGirl_AfiGirl Comp._5
+    21300012: SingGirl_AfiGirl Comp._6
+    21300014: SingGirl_AfiGirl Comp._7
+    21300016: SingGirl_AfiGirl Comp._8
+    21300018: SingGirl_AfiGirl Comp._11
+    21300020: SingGirl_AfiGirl Comp._12
+    21300022: SingGirl_AfiGirl Comp._13
+    21300024: SingGirl_AfiGirl Comp._14
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._0
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 213
+        width: 27
+        height: 72
+      alignment: 9
+      pivot: {x: 0.44640154, y: 0.96229297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd1dc50f8100b047aec4877df3d2cdd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._1
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 205
+        width: 69
+        height: 91
+      alignment: 9
+      pivot: {x: 0.48601764, y: 0.04941349}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f856e62963097744abbacc975314f598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 277
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5add4578309a140b2d456b9847f9a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._3
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 218
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.089966156, y: 0.102025986}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723dfb8aedad9644cb1e21fe97cd6af1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 207
+        width: 11
+        height: 19
+      alignment: 9
+      pivot: {x: 0.45614624, y: 0.88083607}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92370c3de4b3e514cbef7a877a1bd28c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4
+        width: 73
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141f3ec38fb99b4438c3366965f2b55b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 170
+        width: 15
+        height: 19
+      alignment: 9
+      pivot: {x: 0.33920252, y: 0.804669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b15a3a6b16ba2c43bf51c99e2641a04
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._7
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 146
+        width: 25
+        height: 51
+      alignment: 9
+      pivot: {x: 0.65436524, y: 0.95401686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7064d517003f448b625c1cfb397cf3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._8
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 0
+        width: 70
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491922312fa1bc84b9c35e8b954f2575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._11
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 102
+        width: 30
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5160797, y: 0.8946848}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ca9200bbc62a0468030e4c61c451d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._12
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 20
+        width: 69
+        height: 89
+      alignment: 9
+      pivot: {x: 0.5419472, y: 0.07180867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2566af2cac68e4ea46000cfff293b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._13
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 105
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16c8fd9d522a5a4f810466829e0a57f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SingGirl_AfiGirl Comp._14
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 120
+        width: 45
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0795cf7c8765e44cb7af7933c769acf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 70cf2b6b7776f314ab316e8baa02dafb
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
