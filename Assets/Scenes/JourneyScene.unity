@@ -5792,6 +5792,7 @@ GameObject:
   - component: {fileID: 1010602226}
   - component: {fileID: 1010602225}
   - component: {fileID: 1010602228}
+  - component: {fileID: 1010602229}
   m_Layer: 0
   m_Name: Star_Particle_Comp.
   m_TagString: Untagged
@@ -5886,6 +5887,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
+--- !u!114 &1010602229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010602224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e354ceb31df93468953e3cb7dd204f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1146751963
 GameObject:
   m_ObjectHideFlags: 0
