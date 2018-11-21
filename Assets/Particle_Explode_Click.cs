@@ -9,20 +9,20 @@ public class Particle_Explode_Click : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        /* mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        transform.position = objPosition;
+        transform.position = objPosition;*/
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
 
     private void OnMouseDown()
-    {
+    {  
         mouseOrigin = Input.mousePosition;
+        StarParticles.SetActive(true);
         Destroy(this.gameObject);
-        Instantiate(StarParticles);
     }
 }
