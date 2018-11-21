@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Jigsaw : MonoBehaviour {
     public static int piecesleft = 0;
     public string sceneName;
+    public GameObject JTD;
+    public GameObject Jig;
     public GameObject finishButton;
     public GameObject restartButton;
     // Use this for initialization
@@ -17,8 +19,8 @@ public class Jigsaw : MonoBehaviour {
 	void Update () {
         if (piecesleft == 4)
         {
-            finishButton.SetActive(true);
-            restartButton.SetActive(false);
+            JTD.SetActive(true);
+            Jig.SetActive(false);
         }
 	}
 
