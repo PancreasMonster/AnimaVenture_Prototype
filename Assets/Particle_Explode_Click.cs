@@ -22,6 +22,7 @@ public class Particle_Explode_Click : MonoBehaviour {
     private void OnMouseDown()
     {  
         mouseOrigin = Input.mousePosition;
+        StarParticles.transform.parent = this.transform.parent;
         StarParticles.SetActive(true);
         Destroy(this.gameObject);
     }
