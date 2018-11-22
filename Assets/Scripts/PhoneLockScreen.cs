@@ -47,6 +47,12 @@ public class PhoneLockScreen : MonoBehaviour
             link = true;
         }
 
+       
+
+    
+
+
+
         if (gameObject.GetComponent<LineRenderer>() != null)
         {
             
@@ -68,8 +74,9 @@ public class PhoneLockScreen : MonoBehaviour
     }
 
     void OnMouseOver()
-        {
+    {
 
+        if (plm.drag == true) { 
         if (plm.startSequence == true && unselected == false)
         {
             plm.startSequence = true;
@@ -90,12 +97,12 @@ public class PhoneLockScreen : MonoBehaviour
             col.color = grad;
             ps.Play();
             StartCoroutine(StopPS());
-            
+
 
 
             if (LR.positionCount > 0)
             {
-                
+
 
                 if (LR.positionCount > plm.posCount)
                 {
@@ -109,6 +116,7 @@ public class PhoneLockScreen : MonoBehaviour
                 }
             }
         }
+    }
     }
 
     void OnMouseExit()
@@ -126,7 +134,7 @@ public class PhoneLockScreen : MonoBehaviour
             unselected = true;
             gameObject.tag = ("PhoneCell");
             plm.posCounter += 1;
-
+            plm.drag = true;
             var col = ps.colorOverLifetime;
             col.enabled = true;
 
