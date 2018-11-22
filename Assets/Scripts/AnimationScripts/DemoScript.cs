@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class DemoScript : MonoBehaviour {
 
+    private PhoneLockScreen pls;
     private LineRenderer LR;
+    private DemoScript ds;
     public Animator anim;
     public Transform cursor;
+    public GameObject cursorMain, panel;
+    public PhoneLockManager plm;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+        pls = GetComponent<PhoneLockScreen>();
         LR = GetComponent<LineRenderer>();
+        ds = GetComponent<DemoScript>();
         StartCoroutine(DemoScene());
         LR.startWidth = .2f; //tran.localScale.x / 5;
         LR.endWidth = .2f; // tran.localScale.x / 5;
@@ -30,7 +36,14 @@ public class DemoScript : MonoBehaviour {
     {
         yield return new WaitForSeconds(2);
         anim.SetBool("Start", true);
-
-
+        yield return new WaitForSeconds(2);
+        pls.enabled = true;
+        Destroy(LR);
+        Destroy(cursorMain);
+        Destroy(panel);
+        yield return new WaitForSeconds(Time.deltaTime);
+        plm.Undo();
+        yield return new WaitForSeconds(Time.deltaTime);
+        Destroy(ds);
     }
 }
