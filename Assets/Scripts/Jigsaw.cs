@@ -10,6 +10,8 @@ public class Jigsaw : MonoBehaviour {
     public GameObject Jig;
     public GameObject finishButton;
     public GameObject restartButton;
+    public GameObject particle;
+
     // Use this for initialization
     void Start () {
 		
@@ -19,13 +21,20 @@ public class Jigsaw : MonoBehaviour {
 	void Update () {
         if (piecesleft == 4)
         {
-            JTD.SetActive(true);
-            Jig.SetActive(false);
+            StartCoroutine(Next());
         }
 	}
 
     public void nextScene()
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    IEnumerator Next()
+    {
+        particle.SetActive(true);
+        yield return new WaitForSeconds(2);
+        JTD.SetActive(true);
+        Jig.SetActive(false);
     }
 }
