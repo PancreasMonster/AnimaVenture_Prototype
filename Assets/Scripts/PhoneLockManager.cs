@@ -33,7 +33,7 @@ public class PhoneLockManager : MonoBehaviour {
     {
 
         Ray line = Camera.main.ScreenPointToRay(Input.mousePosition);
-		if (startSequence == true && sceneTransition == false && LR.positionCount >= 3)
+        if (startSequence == true && sceneTransition == false)
         {
             undo.enabled = true;
             finish.enabled = true; 
