@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 42428901}
   - component: {fileID: 42428902}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 121764108}
   - component: {fileID: 121764109}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1507,7 +1507,7 @@ GameObject:
   - component: {fileID: 400161935}
   - component: {fileID: 400161936}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1733,7 +1733,7 @@ GameObject:
   - component: {fileID: 423313648}
   - component: {fileID: 423313649}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2245,6 +2245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 507515876}
   - component: {fileID: 507515877}
+  - component: {fileID: 507515878}
   m_Layer: 0
   m_Name: Jigsaw
   m_TagString: Untagged
@@ -2295,6 +2296,24 @@ MonoBehaviour:
   finishButton: {fileID: 488443280}
   restartButton: {fileID: 255042299}
   particle: {fileID: 2026878336}
+--- !u!95 &507515878
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507515875}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14aa8a3ca5a29604d9df6f6f4ca276c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &528590025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,7 +2746,7 @@ GameObject:
   - component: {fileID: 710231002}
   - component: {fileID: 710231003}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2798,6 +2817,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &734267956
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 734267958}
+  - component: {fileID: 734267957}
+  m_Layer: 0
+  m_Name: _FungusState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &734267957
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 734267956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedFlowchart: {fileID: 0}
+--- !u!4 &734267958
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 734267956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &773357873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2958,7 +3018,7 @@ GameObject:
   - component: {fileID: 808203776}
   - component: {fileID: 808203777}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3333,7 +3393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 918241857}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4230,7 +4290,7 @@ GameObject:
   - component: {fileID: 1034375369}
   - component: {fileID: 1034375370}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4605,7 +4665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1194631349}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4709,7 +4769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1238771933}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4889,7 +4949,7 @@ GameObject:
   - component: {fileID: 1288102460}
   - component: {fileID: 1288102461}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6295,7 +6355,7 @@ GameObject:
   - component: {fileID: 1778615062}
   - component: {fileID: 1778615063}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6521,7 +6581,7 @@ GameObject:
   - component: {fileID: 1819612021}
   - component: {fileID: 1819612022}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6671,7 +6731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1892556279}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6701,7 +6761,7 @@ GameObject:
   - component: {fileID: 1917312372}
   - component: {fileID: 1917312373}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7233,7 +7293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2026878337
 Transform:
   m_ObjectHideFlags: 0
@@ -11922,7 +11982,7 @@ GameObject:
   - component: {fileID: 2051155853}
   - component: {fileID: 2051155854}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11996,6 +12056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2065521976}
+  - component: {fileID: 2065521977}
   m_Layer: 0
   m_Name: JoinTheDots
   m_TagString: JoinTheDots
@@ -12017,6 +12078,24 @@ Transform:
   m_Father: {fileID: 1596688876}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2065521977
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2065521975}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 458834649f50e8c43a884018eab988cf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2079576230
 GameObject:
   m_ObjectHideFlags: 0
@@ -12177,7 +12256,7 @@ GameObject:
   - component: {fileID: 2085411533}
   - component: {fileID: 2085411534}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
