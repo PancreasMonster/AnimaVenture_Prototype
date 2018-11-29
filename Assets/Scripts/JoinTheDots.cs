@@ -8,6 +8,7 @@ public class JoinTheDots : MonoBehaviour {
     public GameObject Jigsaw;
     public GameObject finishButton;
     public GameObject restartButton;
+    public GameObject Particle;
     public GameObject[] Line;
     void Start() {
 
@@ -21,8 +22,7 @@ public class JoinTheDots : MonoBehaviour {
 
         if (dotn == 14)
         {
-            finishButton.SetActive(true);
-            restartButton.SetActive(false);
+            StartCoroutine(Next());
         }
 
         if(dots[0].GetComponent<Dot>().fill == true)
@@ -184,5 +184,14 @@ public class JoinTheDots : MonoBehaviour {
         {
             Line[12].SetActive(true);
         }
+    }
+
+    IEnumerator Next()
+    {
+        Particle.SetActive(true);
+        yield return new WaitForSeconds(2);
+        finishButton.SetActive(true);
+        restartButton.SetActive(false);
+        this.gameObject.SetActive(false);
     }
 }
