@@ -41,6 +41,7 @@ public class DemoScript : MonoBehaviour {
         Destroy(LR);
         Destroy(cursorMain);
         Destroy(panel);
+        plm.endAnim = true;
         yield return new WaitForSeconds(Time.deltaTime);
         plm.Undo();
         yield return new WaitForSeconds(Time.deltaTime);

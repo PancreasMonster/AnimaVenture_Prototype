@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PhoneLockManager : MonoBehaviour {
 
-    public bool startSequence = false, drag= false;
+    public bool startSequence = false, drag = false, endAnim = false, LRmin = false;
     private bool sceneTransition, checkForLR;
     public int first = 0, second = 1, posCount = 2, posCounter = 2;
     private LineRenderer LR; 
@@ -33,13 +33,13 @@ public class PhoneLockManager : MonoBehaviour {
     {
 
         Ray line = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (startSequence == true && sceneTransition == false)
+        if (startSequence == true && sceneTransition == false && LRmin == true)
         {
             undo.enabled = true;
             finish.enabled = true; 
         }
 
-        if (startSequence == false && sceneTransition == false)
+        if (startSequence == false && sceneTransition == false && LRmin == false)
         {
             undo.enabled = false;
             finish.enabled = false;
@@ -108,6 +108,7 @@ public class PhoneLockManager : MonoBehaviour {
         first = 0;
         second = 1;
         posCount = 2;
+        LRmin = false;
         posCounter = 2;
         for(int i = 0; i < LRpoints.Length; i++)
         {

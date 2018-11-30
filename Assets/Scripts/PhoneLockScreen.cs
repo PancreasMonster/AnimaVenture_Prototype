@@ -70,13 +70,20 @@ public class PhoneLockScreen : MonoBehaviour
             {
                 LR.SetPosition(i, plm.LRpoints[i].position);
             }
+
+            if (LR.positionCount > 1) {
+                plm.LRmin = true;
+            } else
+            {
+                plm.LRmin = false;
+            }
         }
     }
 
     void OnMouseOver()
     {
 
-        if (plm.drag == true) { 
+        if (plm.drag == true && plm.endAnim == true) { 
         if (plm.startSequence == true && unselected == false)
         {
             plm.startSequence = true;
@@ -126,7 +133,7 @@ public class PhoneLockScreen : MonoBehaviour
 
     public void OnMouseDrag()
     {
-        if (plm.startSequence == false && unselected == false)
+        if (plm.startSequence == false && unselected == false && plm.endAnim == true)
         {
             LR = gameObject.AddComponent<LineRenderer>();
             plm.startSequence = true;
