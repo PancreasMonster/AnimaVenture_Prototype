@@ -14,8 +14,8 @@ public class Jigsaw : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        piecesleft = 0;
+    }
 	
 	// Update is called once per frame
 	void Update () {

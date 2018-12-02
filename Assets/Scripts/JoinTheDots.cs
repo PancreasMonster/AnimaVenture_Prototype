@@ -10,8 +10,9 @@ public class JoinTheDots : MonoBehaviour {
     public GameObject restartButton;
     public GameObject Particle;
     public GameObject[] Line;
-    void Start() {
 
+    void Start() {
+        dotn = 0;
     }
 
     // Update is called once per frame
