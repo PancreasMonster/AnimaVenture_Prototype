@@ -165,9 +165,9 @@ TextureImporter:
       name: Parrot_2
       rect:
         serializedVersion: 2
-        x: 578
+        x: 600
         y: 24
-        width: 322
+        width: 300
         height: 267
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
