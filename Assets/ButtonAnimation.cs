@@ -14,6 +14,11 @@ public class ButtonAnimation : MonoBehaviour {
         GetComponent<Animator>().SetBool("Clicked", true);
     }
 
+    public void StopAnimation()
+    {
+        GetComponent<Animator>().SetBool("Clicked", false);
+    }
+
     // Update is called once per frame
     void Update () {
 		
