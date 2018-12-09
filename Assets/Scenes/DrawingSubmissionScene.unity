@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 766155777}
   - component: {fileID: 766155776}
   - component: {fileID: 766155775}
+  - component: {fileID: 766155779}
   m_Layer: 5
   m_Name: Take Pic + Finish
   m_TagString: Untagged
@@ -379,7 +380,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 766155773}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93004e55a08e0cc49bb72a144d235c13, type: 3}
   m_Name: 
@@ -424,9 +425,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 766155775}
-        m_MethodName: Screen
-        m_Mode: 5
+      - m_Target: {fileID: 766155779}
+        m_MethodName: Load
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -471,6 +472,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 766155773}
   m_CullTransparentMesh: 0
+--- !u!114 &766155779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 766155773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193fb01f38ae5c843b9c53d12b899a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneToLoad: MainMenuScene
 --- !u!1 &791257510
 GameObject:
   m_ObjectHideFlags: 0
