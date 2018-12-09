@@ -88,7 +88,7 @@ public class PhoneLockScreen : MonoBehaviour
         {
             plm.startSequence = true;
             unselected = true;
-
+            gameObject.tag = ("SelectedCell");
             plm.first += 1;
             plm.second += 1;
             plm.posCounter += 1;
@@ -153,12 +153,12 @@ public class PhoneLockScreen : MonoBehaviour
 
         }
 
-        if (gameObject.GetComponent<LineRenderer>() == null)
-            return;
+        if (gameObject.GetComponent<LineRenderer>() != null)
+        {
 
-        linking = true;
+            linking = true;
 
-        if (LR.positionCount > 2)
+            if (LR.positionCount > 2)
             {
                 LR.SetPosition(plm.second, line.origin);
             }
@@ -167,14 +167,41 @@ public class PhoneLockScreen : MonoBehaviour
                 LR.SetPosition(1, line.origin);
             }
             LR.positionCount = plm.posCounter;
-        // LR.startColor = (Color.blue);
-        //  LR.endColor = (Color.blue);
-        LR.startWidth = .2f; //tran.localScale.x / 5;
-        LR.endWidth = .2f; // tran.localScale.x / 5;
-        LR.numCornerVertices = 1;
-        LR.alignment = LineAlignment.TransformZ;
+            // LR.startColor = (Color.blue);
+            //  LR.endColor = (Color.blue);
+            LR.startWidth = .2f; //tran.localScale.x / 5;
+            LR.endWidth = .2f; // tran.localScale.x / 5;
+            LR.numCornerVertices = 1;
+            LR.alignment = LineAlignment.TransformZ;
             LR.SetPosition(0, transform.position);
-        LR.sortingOrder = -1;
+            LR.sortingOrder = -1;
+        }
+
+        if (gameObject.GetComponent<LineRenderer>() == null && unselected == true)
+        {
+
+            linking = true;
+
+            LineRenderer mainLR = GameObject.FindGameObjectWithTag("PhoneCell").GetComponent<LineRenderer>();
+
+            if (LR.positionCount > 2)
+            {
+                mainLR.SetPosition(plm.second, line.origin);
+            }
+            else
+            {
+                mainLR.SetPosition(1, line.origin);
+            }
+            mainLR.positionCount = plm.posCounter;
+            // mainLR.startColor = (Color.blue);
+            //  mainLR.endColor = (Color.blue);
+            mainLR.startWidth = .2f; //tran.localScale.x / 5;
+            mainLR.endWidth = .2f; // tran.localScale.x / 5;
+            mainLR.numCornerVertices = 1;
+            mainLR.alignment = LineAlignment.TransformZ;
+            mainLR.SetPosition(0, transform.position);
+            mainLR.sortingOrder = -1;
+        }
     }
 
    

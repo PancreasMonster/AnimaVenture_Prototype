@@ -9,7 +9,7 @@ public class PhoneLockManager : MonoBehaviour {
     public bool startSequence = false, drag = false, endAnim = false, LRmin = false;
     private bool sceneTransition, checkForLR;
     public int first = 0, second = 1, posCount = 2, posCounter = 2;
-    private LineRenderer LR; 
+    public static LineRenderer LR; 
     public Button undo, finish;
     public Transform[] LRpoints;
     private PhoneLockScreen[] cells;
@@ -51,7 +51,7 @@ public class PhoneLockManager : MonoBehaviour {
            // Vector3 rayPos = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 0, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
             if (Physics.Raycast(line.origin, Vector3.down, out hit, Mathf.Infinity))
             {
-                if (hit.transform.tag == "PhoneCell")
+                if (hit.transform.tag == "PhoneCell" || hit.transform.tag == "SelectedCell")
                 {
 
                     drag = true;
@@ -119,6 +119,7 @@ public class PhoneLockManager : MonoBehaviour {
         {
             cells[i].unselected = false;
             cells[i].link = false;
+            cells[i].gameObject.tag = ("Untagged");
         }
     }
     
