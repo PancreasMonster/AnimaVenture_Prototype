@@ -27,6 +27,7 @@ TagManager:
   - Paint
   - PaintHere
   - SelectedCell
+  - People
   layers:
   - Default
   - TransparentFX
