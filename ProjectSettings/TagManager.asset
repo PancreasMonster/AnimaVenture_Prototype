@@ -26,6 +26,7 @@ TagManager:
   - Sound
   - Paint
   - PaintHere
+  - SelectedCell
   layers:
   - Default
   - TransparentFX
