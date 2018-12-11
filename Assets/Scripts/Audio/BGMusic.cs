@@ -21,6 +21,12 @@ public class BGMusic : MonoBehaviour {
 
     }
 
+    public void ToMainMenu()
+    {
+        StartCoroutine(FadeInSound());
+        StartCoroutine(TransitionMenuScene());
+    }
+
     public void ToAvatarScene()
     {
         StartCoroutine(FadeInSound());
@@ -154,5 +160,15 @@ public class BGMusic : MonoBehaviour {
         StartCoroutine(FadeOutSound());
         SceneManager.LoadScene("JourneyScene", LoadSceneMode.Single);
         anim.SetBool("End", false);
+    }
+
+    IEnumerator TransitionMenuScene()
+    {
+        anim.SetBool("End", true);
+        yield return new WaitForSeconds(SecondsToFade);
+        StartCoroutine(FadeOutSound());
+        SceneManager.LoadScene("MainMenuScene", LoadSceneMode.Single);
+        anim.SetBool("End", false);
+        Destroy(this.gameObject);
     }
 }

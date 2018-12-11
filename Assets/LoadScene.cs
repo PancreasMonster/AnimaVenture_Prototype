@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour {
 
     public string SceneToLoad;
+    GameObject bgmh;
+    BGMusic bgm;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    void Start () {
+        bgmh = GameObject.FindGameObjectWithTag("BG Music");
+        bgm = GameObject.FindGameObjectWithTag("BG Music").GetComponent<BGMusic>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,12 +22,9 @@ public class LoadScene : MonoBehaviour {
 
     public void Load()
     {
-        StartCoroutine(Wait());
+        bgm.ToMainMenu();
+        
     }
 
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(SceneToLoad);
-    }
+  
 }
