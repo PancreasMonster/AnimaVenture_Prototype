@@ -5,8 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LOADSCENEWORKING : MonoBehaviour {
 
-    public void LoadTheNextScene ( int sceneIndex)
+    BGMusic bgm;
+
+    void Start()
     {
-        SceneManager.LoadScene(sceneIndex);
+        bgm = GameObject.FindGameObjectWithTag("BG Music").GetComponent<BGMusic>();
+    }
+
+
+    public void sceneTransition()
+    {
+        bgm.ToWorldScene();
     }
 }
