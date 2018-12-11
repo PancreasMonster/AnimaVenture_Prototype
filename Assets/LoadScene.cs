@@ -19,6 +19,12 @@ public class LoadScene : MonoBehaviour {
 
     public void Load()
     {
+        StartCoroutine(Wait());
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(SceneToLoad);
     }
 }
