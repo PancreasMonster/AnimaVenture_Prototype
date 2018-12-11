@@ -11,7 +11,6 @@ public class Journey_Begins : MonoBehaviour {
     public AudioSource myAudio;
     public string textToShow;
     public Text textBox;
-    public GameObject ParticleSystem;
     public string SceneName;
 
 	// Use this for initialization
@@ -30,7 +29,6 @@ public class Journey_Begins : MonoBehaviour {
         textBox.text = textToShow;
         yield return new WaitForSeconds(timer);
         textBox.text = "";
-        ParticleSystem.SetActive(false);
         myAudio.Play();
         yield return new WaitForSeconds(timerAfterAudio);
         SceneManager.LoadScene(SceneName);

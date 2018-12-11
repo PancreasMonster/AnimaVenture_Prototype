@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4779,7 +4779,10 @@ MonoBehaviour:
   myAudio: {fileID: 1734001560}
   textToShow: Relax, take a deep breath and close your eyes...
   textBox: {fileID: 1776769109}
-  ParticleSystem: {fileID: 349416900}
+  ParticleSystem1: {fileID: 349416900}
+  ParticleSystem2: {fileID: 519767501}
+  ParticleSystem3: {fileID: 986792081}
+  ParticleSystem4: {fileID: 1427789046}
   SceneName: MainMenuScene
 --- !u!4 &410316291
 Transform:
