@@ -83,7 +83,8 @@ public class PhoneLockManager : MonoBehaviour {
 
     public void SceneChange ()
     {
-        // LR.positionCount -= 2;
+        if (LR.positionCount > second)
+            LR.positionCount -= LR.positionCount - second;
         bgm.ToInstructions();
         for (int i = 0; i < cellCols.Length; i++)
         {
