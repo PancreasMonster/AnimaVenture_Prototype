@@ -5468,9 +5468,9 @@ GameObject:
   m_Component:
   - component: {fileID: 26319647}
   - component: {fileID: 26319648}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_Body
-  m_TagString: Untagged
+  m_TagString: Sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6321,7 +6321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 79763487}
   - component: {fileID: 79763488}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_RightEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8693,7 +8693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 216438035}
   - component: {fileID: 216438036}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_RightEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10035,7 +10035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 284200380}
   - component: {fileID: 284200381}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11701,7 +11701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 361296199}
   - component: {fileID: 361296200}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Camel_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14140,9 +14140,9 @@ GameObject:
   - component: {fileID: 488275321}
   - component: {fileID: 488275322}
   - component: {fileID: 488275323}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin (1)
-  m_TagString: Untagged
+  m_TagString: Sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14795,7 +14795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 524482439}
   - component: {fileID: 524482440}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Parrot_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16436,7 +16436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 616419951}
   - component: {fileID: 616419952}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_LeftWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16511,7 +16511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 621250172}
   - component: {fileID: 621250173}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_LeftWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16833,9 +16833,9 @@ GameObject:
   - component: {fileID: 630080819}
   - component: {fileID: 630080820}
   - component: {fileID: 630080821}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin
-  m_TagString: Untagged
+  m_TagString: Sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17851,7 +17851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 675520775}
   - component: {fileID: 675520776}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_RightWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23808,7 +23808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 736784362}
   - component: {fileID: 736784363}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Kangeroo_TailEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25250,7 +25250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 785618069}
   - component: {fileID: 785618070}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Kangeroo_FrontArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25672,7 +25672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 798655792}
   - component: {fileID: 798655793}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_RightEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25748,9 +25748,9 @@ GameObject:
   - component: {fileID: 799202160}
   - component: {fileID: 799202161}
   - component: {fileID: 799202162}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Kangeroo
-  m_TagString: Untagged
+  m_TagString: Sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26621,9 +26621,9 @@ GameObject:
   - component: {fileID: 843054611}
   - component: {fileID: 843054612}
   - component: {fileID: 843054613}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Camel
-  m_TagString: Untagged
+  m_TagString: Sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29073,7 +29073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 950867528}
   - component: {fileID: 950867529}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Kangeroo_BackArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29498,7 +29498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 963106598}
   - component: {fileID: 963106599}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_LeftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29724,7 +29724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 983072704}
   - component: {fileID: 983072705}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Kangeroo_TailBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29801,9 +29801,9 @@ GameObject:
   - component: {fileID: 988812412}
   - component: {fileID: 988812413}
   - component: {fileID: 988812414}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Parrot
-  m_TagString: Untagged
+  m_TagString: Sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31365,9 +31365,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1064210384}
   - component: {fileID: 1064210385}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Parrot_0
-  m_TagString: Untagged
+  m_TagString: Sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31440,7 +31440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1065777853}
   - component: {fileID: 1065777854}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Parrot_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31967,7 +31967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086245010}
   - component: {fileID: 1086245011}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_RightWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32536,7 +32536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1114942183}
   - component: {fileID: 1114942184}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Camel_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33784,9 +33784,9 @@ GameObject:
   - component: {fileID: 1174540575}
   - component: {fileID: 1174540576}
   - component: {fileID: 1174540577}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin (2)
-  m_TagString: Untagged
+  m_TagString: Sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35432,7 +35432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1262343446}
   - component: {fileID: 1262343447}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Camel_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39041,7 +39041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1455305601}
   - component: {fileID: 1455305602}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Kangeroo_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39323,7 +39323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1476175077}
   - component: {fileID: 1476175078}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Camel_Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40821,7 +40821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1568624105}
   - component: {fileID: 1568624106}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Camel_BackHoof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50006,7 +50006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1792985398}
   - component: {fileID: 1792985399}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_RightWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50609,7 +50609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1807273503}
   - component: {fileID: 1807273504}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_LeftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51767,7 +51767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1874571566}
   - component: {fileID: 1874571567}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_LeftWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51842,9 +51842,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1884206535}
   - component: {fileID: 1884206536}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_Body
-  m_TagString: Untagged
+  m_TagString: Sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52475,7 +52475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1917601396}
   - component: {fileID: 1917601397}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Camel_FrontLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55186,6 +55186,7 @@ GameObject:
   - component: {fileID: 2057644103}
   - component: {fileID: 2057644104}
   - component: {fileID: 2057644105}
+  - component: {fileID: 2057644106}
   m_Layer: 0
   m_Name: Elephant
   m_TagString: Untagged
@@ -55250,6 +55251,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.71, y: 1.97}
   m_EdgeRadius: 0
+--- !u!114 &2057644106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057644102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f99572fe4ddace43b32c01e40aee3d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2064027440
 GameObject:
   m_ObjectHideFlags: 0
@@ -55528,7 +55540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2093175721}
   - component: {fileID: 2093175722}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Penguin_LeftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
