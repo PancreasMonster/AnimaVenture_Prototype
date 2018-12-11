@@ -29,26 +29,24 @@ public class TakePic : MonoBehaviour {
             RenderTexture.active = null;
             Destroy(rt);
             byte[] bytes = screenShot.EncodeToPNG();
-            //string filename = Screen("Picture");
-            //System.IO.File.WriteAllBytes(filename, bytes);
+            string filename = ScreenShotName("Picture");
+            System.IO.File.WriteAllBytes(filename, bytes);
             takeshot = false;
         }
 
 	}
-    /*
-    public string Screen(string s)
+
+    public static string ScreenShotName(string s)
+    {
+        return string.Format("{0}/drawings/screen_{1}x{2}.png",
+                             Application.dataPath,
+                             s,
+                             System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
+    }
+
+    public void TakeShot()
     {
         takeshot = true;
     }
-    */
-    
-    /*
-    public string ScreenShotName(int width, int height)
-    {
-        return string.Format("Drawings",
-                             Application.dataPath,
-                             width, height,
-                             System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
-    }
-    */
+
 }
