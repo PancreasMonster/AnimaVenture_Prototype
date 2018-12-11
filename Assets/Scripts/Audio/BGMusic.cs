@@ -33,6 +33,12 @@ public class BGMusic : MonoBehaviour {
         StartCoroutine(TransitionToWorldScene());
     }
 
+    public void ToInstructions()
+    {
+        StartCoroutine(FadeInSound());
+        StartCoroutine(TransitionToInstructions());
+    }
+
     public void ToPaintByNumbers(Transform target)
     {
         StartCoroutine(FadeInSound());
@@ -101,6 +107,15 @@ public class BGMusic : MonoBehaviour {
         yield return new WaitForSeconds(SecondsToFade);
         StartCoroutine(FadeOutSound());
         SceneManager.LoadScene("PhonePatternScene", LoadSceneMode.Single);
+        anim.SetBool("End", false);
+    }
+
+    IEnumerator TransitionToInstructions()
+    {
+        anim.SetBool("End", true);
+        yield return new WaitForSeconds(SecondsToFade);
+        StartCoroutine(FadeOutSound());
+        SceneManager.LoadScene("Instructions", LoadSceneMode.Single);
         anim.SetBool("End", false);
     }
 
