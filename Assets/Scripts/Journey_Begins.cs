@@ -43,7 +43,7 @@ public class Journey_Begins : MonoBehaviour {
 
         for (float x = 0.0f; x <= 1.0f; x += Time.deltaTime * rate)
         {
-            myAudio.volume = Mathf.Lerp(0, .25f, x);
+            myAudio.volume = Mathf.Lerp(0, .75f, x);
             yield return null;
         }
         //yield return new WaitForSeconds(SecondsToFade);
