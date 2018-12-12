@@ -86,7 +86,7 @@ public class BGMusic : MonoBehaviour {
 
         for (float x = 0.0f; x <= 1.0f; x += Time.deltaTime * rate)
         {
-            aud.volume = Mathf.Lerp(0, .1f, x);
+            aud.volume = Mathf.Lerp(0, .3f, x);
             yield return null;
         }
         //yield return new WaitForSeconds(SecondsToFade);
