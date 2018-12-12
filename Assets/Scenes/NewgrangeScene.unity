@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 345659}
   - component: {fileID: 345658}
   m_Layer: 5
-  m_Name: RoofGrass_Bright
+  m_Name: Spr_RoofGrass_Bright
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 10810377}
   - component: {fileID: 10810376}
   m_Layer: 5
-  m_Name: Frontstone_4
+  m_Name: Spr_Frontstone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 34268430}
   - component: {fileID: 34268433}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Finish_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 72007871}
   - component: {fileID: 72007870}
   m_Layer: 5
-  m_Name: Sidestone_6
+  m_Name: Spr_Sidestone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 90195172}
   - component: {fileID: 90195171}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Spr_Frontstone_Layer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1347,7 +1347,7 @@ GameObject:
   - component: {fileID: 156079372}
   - component: {fileID: 156079371}
   m_Layer: 5
-  m_Name: DarkGrass_3
+  m_Name: Spr_DarkGrass_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1492,7 +1492,7 @@ GameObject:
   - component: {fileID: 176054657}
   - component: {fileID: 176054656}
   m_Layer: 5
-  m_Name: Frontstone_2
+  m_Name: Spr_Frontstone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1950,7 +1950,7 @@ GameObject:
   - component: {fileID: 266699221}
   - component: {fileID: 266699220}
   m_Layer: 5
-  m_Name: Sky
+  m_Name: Spr_Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2077,7 +2077,7 @@ GameObject:
   - component: {fileID: 271702037}
   - component: {fileID: 271702036}
   m_Layer: 5
-  m_Name: DarkGrass_2
+  m_Name: Spr_DarkGrass_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3088,7 +3088,7 @@ GameObject:
   - component: {fileID: 469121138}
   - component: {fileID: 469121137}
   m_Layer: 5
-  m_Name: Sidestone_1
+  m_Name: Spr_Sidestone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3298,7 +3298,7 @@ GameObject:
   - component: {fileID: 484275013}
   - component: {fileID: 484275012}
   m_Layer: 5
-  m_Name: DarkGrass_1
+  m_Name: Spr_DarkGrass_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3441,7 +3441,7 @@ GameObject:
   - component: {fileID: 511380440}
   - component: {fileID: 511380439}
   m_Layer: 5
-  m_Name: Path_Dark
+  m_Name: Spr_Path_Dark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3761,7 +3761,7 @@ GameObject:
   - component: {fileID: 637224884}
   - component: {fileID: 637224886}
   m_Layer: 5
-  m_Name: BrightGrass
+  m_Name: Spr_Bright_Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3899,7 +3899,7 @@ GameObject:
   - component: {fileID: 638419740}
   - component: {fileID: 638419739}
   m_Layer: 5
-  m_Name: Stone_Top_1
+  m_Name: Spr_Stone_Top_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4353,7 +4353,7 @@ GameObject:
   - component: {fileID: 720598824}
   - component: {fileID: 720598823}
   m_Layer: 5
-  m_Name: Sidestone_4
+  m_Name: Spr_Sidestone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4470,7 +4470,7 @@ GameObject:
   - component: {fileID: 725202749}
   - component: {fileID: 725202748}
   m_Layer: 5
-  m_Name: Sidestone_2
+  m_Name: Spr_Sidestone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4588,7 +4588,7 @@ GameObject:
   - component: {fileID: 756320936}
   - component: {fileID: 756320935}
   m_Layer: 5
-  m_Name: RoofGrass_Dark_3
+  m_Name: Spr_RoofGrass_Dark_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5407,7 +5407,7 @@ GameObject:
   - component: {fileID: 909723422}
   - component: {fileID: 909723421}
   m_Layer: 5
-  m_Name: RoofGrass_Dark_5
+  m_Name: Spr_RoofGrass_Dark_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5799,7 +5799,7 @@ GameObject:
   - component: {fileID: 1013170990}
   - component: {fileID: 1013170989}
   m_Layer: 5
-  m_Name: NewgrangeFull
+  m_Name: Newgrange_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5870,7 +5870,7 @@ GameObject:
   - component: {fileID: 1041125981}
   - component: {fileID: 1041125980}
   m_Layer: 5
-  m_Name: Path_Bright_2
+  m_Name: Spr_Path_Bright_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6253,7 +6253,7 @@ GameObject:
   - component: {fileID: 1063902464}
   - component: {fileID: 1063902463}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Spr_Frontstone_Layer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6324,7 +6324,7 @@ GameObject:
   - component: {fileID: 1069603879}
   - component: {fileID: 1069603878}
   m_Layer: 5
-  m_Name: Wall_Bright_2
+  m_Name: Spr_Wall_Bright_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6454,7 +6454,7 @@ GameObject:
   - component: {fileID: 1070073899}
   - component: {fileID: 1070073898}
   m_Layer: 5
-  m_Name: Frontstone_3
+  m_Name: Spr_Frontstone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6578,7 +6578,7 @@ GameObject:
   - component: {fileID: 1094333835}
   - component: {fileID: 1094333834}
   m_Layer: 5
-  m_Name: Wall_Bright_3
+  m_Name: Spr_Wall_Bright_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6687,7 +6687,7 @@ GameObject:
   - component: {fileID: 1177448190}
   - component: {fileID: 1177448189}
   m_Layer: 5
-  m_Name: FrontStone_1
+  m_Name: Spr_FrontStone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6945,7 +6945,7 @@ GameObject:
   - component: {fileID: 1222782540}
   - component: {fileID: 1222782539}
   m_Layer: 5
-  m_Name: Stone_Top_2
+  m_Name: Spr_Stone_Top_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7316,7 +7316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1256940004}
   m_Layer: 0
-  m_Name: Pause
+  m_Name: Pause_Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7542,7 +7542,7 @@ GameObject:
   - component: {fileID: 1310060068}
   - component: {fileID: 1310060067}
   m_Layer: 5
-  m_Name: Sidestone_5
+  m_Name: Spr_Sidestone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7661,7 +7661,7 @@ GameObject:
   - component: {fileID: 1326805745}
   - component: {fileID: 1326805744}
   m_Layer: 5
-  m_Name: Sidestone_8
+  m_Name: Spr_Sidestone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7781,7 +7781,7 @@ GameObject:
   - component: {fileID: 1365840284}
   - component: {fileID: 1365840283}
   m_Layer: 5
-  m_Name: RoofGrass_Dark_2
+  m_Name: Spr_RoofGrass_Dark_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7915,7 +7915,7 @@ GameObject:
   - component: {fileID: 1377509189}
   - component: {fileID: 1377509188}
   m_Layer: 5
-  m_Name: Doorway
+  m_Name: Spr_Doorway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8170,6 +8170,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1478314303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1478314304}
+  m_Layer: 5
+  m_Name: Newgrange_WhiteBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1478314304
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1478314303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1690784949}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1479387723
 GameObject:
   m_ObjectHideFlags: 0
@@ -8183,7 +8216,7 @@ GameObject:
   - component: {fileID: 1479387728}
   - component: {fileID: 1479387727}
   m_Layer: 5
-  m_Name: RoofGrass_Dark_1
+  m_Name: Spr_RoofGrass_Dark_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8911,7 +8944,7 @@ GameObject:
   - component: {fileID: 1560501584}
   - component: {fileID: 1560501583}
   m_Layer: 5
-  m_Name: Sidestone_7
+  m_Name: Spr_Sidestone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9030,7 +9063,7 @@ GameObject:
   - component: {fileID: 1561629427}
   - component: {fileID: 1561629426}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Spr_Frontstone_Layer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9101,7 +9134,7 @@ GameObject:
   - component: {fileID: 1581562072}
   - component: {fileID: 1581562071}
   m_Layer: 5
-  m_Name: Wall_Bright_1
+  m_Name: Spr_Wall_Bright_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9233,7 +9266,7 @@ GameObject:
   - component: {fileID: 1617706154}
   - component: {fileID: 1617706153}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Spr_Frontstone_Layer4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9379,7 +9412,7 @@ GameObject:
   - component: {fileID: 1628284657}
   - component: {fileID: 1628284656}
   m_Layer: 5
-  m_Name: Kerbstone
+  m_Name: Spr_Kerbstone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9491,7 +9524,7 @@ GameObject:
   - component: {fileID: 1634534434}
   - component: {fileID: 1634534433}
   m_Layer: 5
-  m_Name: RoofGrass_Dark_4
+  m_Name: Spr_RoofGrass_Dark_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9825,6 +9858,7 @@ RectTransform:
   - {fileID: 1256940004}
   - {fileID: 1543613825}
   - {fileID: 1923264997}
+  - {fileID: 1478314304}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9846,7 +9880,7 @@ GameObject:
   - component: {fileID: 1744305382}
   - component: {fileID: 1744305381}
   m_Layer: 5
-  m_Name: Path_Bright_1
+  m_Name: Spr_Path_Bright_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10533,7 +10567,7 @@ GameObject:
   - component: {fileID: 1843240504}
   - component: {fileID: 1843240503}
   m_Layer: 5
-  m_Name: Sidestone_3
+  m_Name: Spr_Sidestone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10657,7 +10691,7 @@ GameObject:
   - component: {fileID: 1855103386}
   - component: {fileID: 1855103385}
   m_Layer: 5
-  m_Name: Wall_Dark_1
+  m_Name: Spr_Wall_Dark_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11025,7 +11059,7 @@ GameObject:
   - component: {fileID: 1874826844}
   - component: {fileID: 1874826843}
   m_Layer: 5
-  m_Name: Wall_Dark_2
+  m_Name: Spr_Wall_Dark_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11326,7 +11360,7 @@ GameObject:
   - component: {fileID: 1923264999}
   - component: {fileID: 1923264998}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Screen_Transition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
